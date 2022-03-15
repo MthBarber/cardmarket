@@ -1,3 +1,5 @@
+import { Link, routes } from '@redwoodjs/router'
+
 export const QUERY = gql`
   query BestSellersQuery {
     cards {
@@ -29,15 +31,17 @@ export const Success = ({ cards }) => {
             key={card.id}
             className="flex items-center h-48 justify-between text-xs text-white mx-4"
           >
-            <ul>
-              <li className="h-10 w-28 text-center">{card.name}</li>
-              <img
-                className="h-36 w-30 my-2"
-                src={card.cardImage}
-                alt={card.name}
-              ></img>
-              <li className="text-center">£{card.startingFromPrice}</li>
-            </ul>
+            <Link to={routes.displayCard({ id: card.id })}>
+              <ul>
+                <li className="h-10 w-28 text-center">{card.name}</li>
+                <img
+                  className="h-40 w-36 my-2"
+                  src={card.cardImage}
+                  alt={card.name}
+                ></img>
+                <li className="text-center">£{card.startingFromPrice}</li>
+              </ul>
+            </Link>
           </div>
         )
       })}

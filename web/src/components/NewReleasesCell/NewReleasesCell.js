@@ -1,3 +1,5 @@
+import { Link, routes } from '@redwoodjs/router'
+
 export const QUERY = gql`
   query NewReleasesQuery {
     cards {
@@ -19,10 +21,26 @@ export const Failure = ({ error }) => (
 )
 
 export const Success = ({ cards }) => {
+  let newReleasesArray = []
+  for (let i = 0; newReleasesArray.length < 6; i++) {
+    if (cards[i].releaseYear >= 2020) {
+      newReleasesArray.push(cards[i])
+    }
+  }
+
   return (
     <ul>
-      {cards.map((card) => {
-        return <li key={card.id}>{JSON.stringify(card)}</li>
+      {newReleasesArray.map((card) => {
+        return (
+          card.releaseYear >= 2020 && (
+            <Link to={routes.displayCard({ id: card.id })}>
+              <li className="flex text-white mt-2" key={card.id}>
+                <span className="mr-4">{card.name}</span>
+                <span className="mr-4">£{card.startingFromPrice}</span>
+              </li>
+            </Link>
+          )
+        )
       })}
     </ul>
   )

@@ -13,6 +13,7 @@ import CardsLayout from 'src/layouts/CardsLayout'
 const Routes = () => {
   return (
     <Router>
+      <Route path="/display-card/{id:Int}" page={DisplayCardPage} name="displayCard" />
       <Set wrap={CardsLayout}>
         <Route path="/cards/new" page={CardNewCardPage} name="newCard" />
         <Route path="/cards/{id:Int}/edit" page={CardEditCardPage} name="editCard" />
