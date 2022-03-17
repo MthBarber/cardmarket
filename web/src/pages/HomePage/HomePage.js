@@ -22,14 +22,14 @@ const HomePage = () => {
           <BestSellersCell />
         </div>
       </section>
-      <div className="flex w-full h-80">
-        <section className="w-2/4 h-full flex flex-col items-center justify-center bg-red-900">
+      <div className="flex w-full h-80 justify-center">
+        <section className="w-1/3 h-full flex flex-col items-center justify-center bg-red-900">
           <h3>New Releases!</h3>
           <div>
             <NewReleasesCell />
           </div>
         </section>
-        <section className="w-2/4 h-full flex flex-col items-center justify-center bg-green-900">
+        <section className="w-1/3 h-full flex flex-col items-center justify-center bg-green-900">
           <h3>Best Bargains!</h3>
           <div>
             <BestBargainsCell />
@@ -37,9 +37,7 @@ const HomePage = () => {
         </section>
       </div>
       <footer className="h-24 w-full bg-blue-600 absolute mt-36">
-        <span className=" mt-6 text-center text-white">
-          Designed By A Goose
-        </span>
+        <span className="text-center text-white">Designed By A Goose</span>
       </footer>
     </div>
   )

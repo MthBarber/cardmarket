@@ -1,7 +1,9 @@
+import { useAuth } from '@redwoodjs/auth'
 import React from 'react'
 import { Link, routes } from '@redwoodjs/router'
 
 export function Header() {
+  const { isAuthenticated, currentUser, logOut } = useAuth()
   return (
     <nav className=" bg-yellow-300 h-16 text-white flex justify-center items-center font-sans">
       <h1 className="ml-4 text-2xl tracking-wide font-medium uppercase">
@@ -13,6 +15,20 @@ export function Header() {
         <li>Decks</li>
         <li>Deckboxes</li>
       </ul>
+      {isAuthenticated ? (
+        <div>
+          <span>Logged in as {currentUser.email}</span>{' '}
+          <button
+            className="border border-black"
+            type="button"
+            onClick={logOut}
+          >
+            Logout
+          </button>
+        </div>
+      ) : (
+        <Link to={routes.login()}>Login</Link>
+      )}
     </nav>
   )
 }

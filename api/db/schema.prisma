@@ -12,14 +12,19 @@ generator client {
 // to create migrations for them and apply to your dev DB.
 // TODO: Please remove the following example:
 model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+  id                  Int           @id @default(autoincrement())
+  email               String        @unique
+  name                String?
+  hashedPassword      String
+  salt                String
+  resetToken          String?
+  resetTokenExpiresAt DateTime?
+  itemsForSale        ItemForSale[]
 }
 
 model Card {
-  id                Int    @id @default(autoincrement())
-  name              String @unique
+  id                Int           @id @default(autoincrement())
+  name              String        @unique
   setName           String
   startingFromPrice Float
   cardImage         String
@@ -27,4 +32,16 @@ model Card {
   cardType          String
   manaValue         Int
   releaseYear       Int
+  itemsForSale      ItemForSale[]
+}
+
+model ItemForSale {
+  id       Int    @id @default(autoincrement())
+  name     String
+  quantity Int
+  price    Float
+  card     Card   @relation(fields: [cardId], references: [id])
+  cardId   Int
+  user     User   @relation(fields: [userId], references: [id])
+  userId   Int
 }
