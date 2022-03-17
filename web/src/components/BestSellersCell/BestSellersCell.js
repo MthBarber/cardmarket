@@ -20,26 +20,28 @@ export const Failure = ({ error }) => (
 )
 
 export const Success = ({ cards }) => {
-  {
-    console.log(cards)
+  const bestSellersArray = []
+  for (let i = 0; i < 6; i++) {
+    bestSellersArray.push(cards[i])
   }
+  console.log('best sellers array', bestSellersArray)
+
   return (
-    <div className="flex items-center h-48 justify-around">
-      {cards.map((card) => {
+    <div className="flex items-center h-64 justify-around">
+      {bestSellersArray.map((card) => {
         return (
           <div
             key={card.id}
-            className="flex items-center h-48 justify-between text-xs text-white mx-4"
+            className="flex items-center h-48 justify-between text-sm text-black mx-6"
           >
             <Link to={routes.displayCard({ id: card.id })}>
-              <ul>
+              <ul className="flex flex-col items-center">
                 <li className="h-10 w-28 text-center">{card.name}</li>
                 <img
-                  className="h-40 w-36 my-2"
+                  className="h-56 w-40 my-2"
                   src={card.cardImage}
                   alt={card.name}
                 ></img>
-                <li className="text-center">£{card.startingFromPrice}</li>
               </ul>
             </Link>
           </div>

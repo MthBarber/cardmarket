@@ -8,6 +8,7 @@ export const schema = gql`
     cardId: Int!
     user: User!
     userId: Int!
+    condition: String!
   }
 
   type Query {

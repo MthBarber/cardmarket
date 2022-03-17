@@ -8,6 +8,7 @@ export const schema = gql`
     resetToken: String
     resetTokenExpiresAt: DateTime
     itemsForSale: [ItemForSale]!
+    location: String!
   }
 
   type Query {

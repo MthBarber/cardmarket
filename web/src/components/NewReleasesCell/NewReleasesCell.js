@@ -34,7 +34,7 @@ export const Success = ({ cards }) => {
         return (
           card.releaseYear >= 2020 && (
             <Link to={routes.displayCard({ id: card.id })}>
-              <li className="flex text-white mt-2" key={card.id}>
+              <li className="flex text-black mt-2" key={card.id}>
                 <span className="mr-4">{card.name}</span>
                 <span className="mr-4">£{card.startingFromPrice}</span>
               </li>

@@ -27,7 +27,7 @@ export const Success = ({ cards }) => {
   }
   console.log(bestBargainsArray)
   return (
-    <ul className="text-white flex flex-col">
+    <ul className="text-black flex flex-col">
       {bestBargainsArray.map((card) => {
         return (
           <li key={card.id} className="flex w-full mt-2">

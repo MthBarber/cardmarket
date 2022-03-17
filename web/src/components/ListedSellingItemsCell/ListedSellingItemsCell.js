@@ -5,8 +5,10 @@ export const QUERY = gql`
       name
       quantity
       price
+      condition
       user {
         email
+        location
       }
     }
   }
@@ -22,14 +24,18 @@ export const Failure = ({ error }) => (
 
 export const Success = ({ listedSellingItems }) => {
   return (
-    <div className="flex flex-col justify-start">
+    <div className="flex flex-col justify-start bg-white">
       {listedSellingItems.map((item) => {
         return (
-          <div key={item.id} className="w-full flex justify-around items-start">
-            <span className="w-1/4 text-center">{item.user.email}</span>
-            <span className="w-1/4 text-center">{item.quantity}</span>
-            <span className="w-1/4 text-center">{item.id}</span>
-            <span className="w-1/4 text-center">{item.price}</span>
+          <div
+            key={item.id}
+            className="w-full flex justify-around items-start border-b border-black"
+          >
+            <span className="w-1/5 text-center">{item.user.email}</span>
+            <span className="w-1/5 text-center">{item.user.location}</span>
+            <span className="w-1/5 text-center">{item.condition}</span>
+            <span className="w-1/5 text-center">{item.quantity}</span>
+            <span className="w-1/5 text-center">£{item.price}</span>
           </div>
         )
       })}
