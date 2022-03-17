@@ -9,6 +9,8 @@ export const schema = gql`
     cardType: String!
     manaValue: Int!
     releaseYear: Int!
+    cardId: Int!
+    itemsForSale: [ItemForSale!]!
   }
 
   type Query {

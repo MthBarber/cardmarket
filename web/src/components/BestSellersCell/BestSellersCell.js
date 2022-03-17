@@ -34,7 +34,11 @@ export const Success = ({ cards }) => {
             key={card.id}
             className="flex items-center h-48 justify-between text-sm text-black mx-6"
           >
-            <Link to={routes.displayCard({ id: card.id })}>
+            <Link
+              to={routes.displayCard({
+                id: card.id,
+              })}
+            >
               <ul className="flex flex-col items-center">
                 <li className="h-10 w-28 text-center">{card.name}</li>
                 <img

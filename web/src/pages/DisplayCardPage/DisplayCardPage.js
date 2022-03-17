@@ -31,7 +31,7 @@ const DisplayCardPage = ({ id }) => {
           </div>
         </div>
         <div className="bg-gray-100 h-full">
-          <ListedSellingItemsCell cardId={1} />
+          <ListedSellingItemsCell cardId={id} />
         </div>
       </div>
       <div className="fixed inset-x-0 bottom-0 ">
