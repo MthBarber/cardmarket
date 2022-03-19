@@ -16,7 +16,9 @@ export const QUERY = gql`
 
 export const Loading = () => <div>Loading...</div>
 
-export const Empty = () => <div>Empty</div>
+export const Empty = () => (
+  <div className="text-center bg-white">No items available for sale</div>
+)
 
 export const Failure = ({ error }) => (
   <div style={{ color: 'red' }}>Error: {error.message}</div>
@@ -24,7 +26,7 @@ export const Failure = ({ error }) => (
 
 export const Success = ({ listedSellingItems }) => {
   return (
-    <div className="flex flex-col justify-start bg-white">
+    <div id="jost" className="flex flex-col justify-start bg-white">
       {listedSellingItems.map((item) => {
         return (
           <div

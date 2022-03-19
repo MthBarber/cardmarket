@@ -11,3 +11,20 @@
 /**
  * END --- SETUP TAILWINDCSS EDIT
  */
+
+ #jost {
+
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+
+ }
+
+ #rajdhani {
+  font-family: 'Rajdhani', sans-serif;
+   font-weight: 700;
+ }
+
+ #rajdhani-400 {
+  font-family: 'Rajdhani', sans-serif;
+   font-weight: 400;
+ }

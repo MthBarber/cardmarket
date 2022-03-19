@@ -60,6 +60,24 @@ const CardForm = (props) => {
         <FieldError name="setName" className="rw-field-error" />
 
         <Label
+          name="releaseYear"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Release Year
+        </Label>
+
+        <NumberField
+          name="releaseYear"
+          defaultValue={props.card?.releaseYear}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: true }}
+        />
+
+        <FieldError name="releaseYear" className="rw-field-error" />
+
+        <Label
           name="startingFromPrice"
           className="rw-label"
           errorClassName="rw-label rw-label-error"

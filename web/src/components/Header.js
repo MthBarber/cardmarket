@@ -6,10 +6,16 @@ export function Header() {
   const { isAuthenticated, currentUser, logOut } = useAuth()
   return (
     <nav className=" bg-emerald-600 h-16 text-white flex justify-center items-center font-sans border-b-2 border-black">
-      <h1 className="ml-4 text-2xl tracking-wide font-medium uppercase">
+      <h1
+        id="rajdhani"
+        className="ml-4 text-2xl tracking-wide font-medium uppercase"
+      >
         <Link to={routes.home()}>Collectable's Market</Link>
       </h1>
-      <ul className="flex ml-auto mr-auto gap-8 mt-auto mb-2 font-medium transition-shadow">
+      <ul
+        id="rajdhani"
+        className="flex ml-auto mr-auto gap-8 mt-auto mb-2 font-medium transition-shadow"
+      >
         <li>Cards</li>
         <li>Playmats</li>
         <li>Decks</li>
@@ -17,9 +23,9 @@ export function Header() {
       </ul>
       {isAuthenticated ? (
         <div className="mr-8">
-          <span>Logged in as {currentUser.email}</span>{' '}
+          <span id="rajdhani-400">Logged in as {currentUser.username}</span>{' '}
           <button
-            className="border border-black p-1 m-2 rounded-md bg-white text-black"
+            className="border border-gray-600 p-1 m-2 w-20 rounded-md bg-white text-black md:shadow-md"
             type="button"
             onClick={logOut}
           >
@@ -27,7 +33,11 @@ export function Header() {
           </button>
         </div>
       ) : (
-        <Link to={routes.login()}>Login</Link>
+        <Link span id="rajdhani-400" to={routes.login()}>
+          <button className="mr-8 border border-black rounded-md px-2 bg-white text-black">
+            Login{' '}
+          </button>
+        </Link>
       )}
     </nav>
   )

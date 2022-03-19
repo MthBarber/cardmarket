@@ -6,7 +6,7 @@ import ListedSellingItemsCell from 'src/components/ListedSellingItemsCell/Listed
 
 const DisplayCardPage = ({ id }) => {
   return (
-    <div className="h-full w-screen pb-4 bg-gray-100">
+    <div className="h-full w-screen pb-16 bg-gray-100">
       <Header />
       <MetaTags title="DisplayCard" description="DisplayCard page" />
       <div className="flex justify-center w-2/3 mx-auto mt-6 mb-6 border bg-white">

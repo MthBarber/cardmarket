@@ -20,22 +20,22 @@ export const Failure = ({ error }) => (
 
 export const Success = ({ cards }) => {
   let bestBargainsArray = []
-  for (let i = 0; bestBargainsArray.length < 5; i++) {
+  for (let i = 0; bestBargainsArray.length < 6; i++) {
     if (cards[i].startingFromPrice <= 6.0) {
       bestBargainsArray.push(cards[i])
     }
   }
   console.log(bestBargainsArray)
   return (
-    <ul className="text-black flex flex-col">
+    <ul className="text-black w-full flex flex-col border-x px-16">
       {bestBargainsArray.map((card) => {
         return (
-          <li key={card.id} className="flex w-full mt-2">
-            <Link to={routes.displayCard({ id: card.id })}>
-              <span className="mr-4">{card.name}</span>
-              <span>£{card.startingFromPrice}</span>
-            </Link>
-          </li>
+          <Link key={card.id} to={routes.displayCard({ id: card.id })}>
+            <li className="flex w-full justify-between mt-2 font-medium">
+              <span className="w-10/12 mr-6">{card.name}</span>
+              <span className="w-1/12">£{card.startingFromPrice}</span>
+            </li>
+          </Link>
         )
       })}
     </ul>

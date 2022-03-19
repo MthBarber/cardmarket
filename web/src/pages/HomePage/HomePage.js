@@ -18,21 +18,27 @@ const HomePage = () => {
       <Header />
 
       <section className="w-10/12 h-1/2 flex flex-col items-center justify-start text-black bg-white mx-auto">
-        <h2 className="text-2xl my-6">Current Best Sellers!</h2>
+        <h2 id="rajdhani" className="text-2xl font-bold my-6">
+          Current Best Sellers!
+        </h2>
         <div className="h-60 w-4/5 flex items-center justify-center mt-16">
           <BestSellersCell />
         </div>
       </section>
       <div className="flex w-full h-80 justify-center">
         <section className="w-1/3 h-full flex flex-col items-center justify-center text-black bg-white">
-          <h3>New Releases!</h3>
-          <div>
+          <h3 id="rajdhani" className="font-bold">
+            New Releases!
+          </h3>
+          <div className="mt-4">
             <NewReleasesCell />
           </div>
         </section>
         <section className="w-1/3 h-full flex flex-col items-center justify-center text-black bg-white">
-          <h3>Best Bargains!</h3>
-          <div>
+          <h3 id="rajdhani" className="font-bold">
+            Best Bargains!
+          </h3>
+          <div className="mt-4">
             <BestBargainsCell />
           </div>
         </section>

@@ -40,9 +40,11 @@ export const Success = ({ cards }) => {
               })}
             >
               <ul className="flex flex-col items-center">
-                <li className="h-10 w-28 text-center">{card.name}</li>
+                <li className="h-10 w-28 text-center text-base font-medium">
+                  {card.name}
+                </li>
                 <img
-                  className="h-56 w-40 my-2"
+                  className="h-56 w-40 mt-8"
                   src={card.cardImage}
                   alt={card.name}
                 ></img>

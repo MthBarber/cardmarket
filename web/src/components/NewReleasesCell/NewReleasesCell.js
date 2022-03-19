@@ -29,17 +29,18 @@ export const Success = ({ cards }) => {
   }
 
   return (
-    <ul>
+    <ul className="w-full flex flex-col border-x px-16">
       {newReleasesArray.map((card) => {
         return (
-          card.releaseYear >= 2020 && (
-            <Link to={routes.displayCard({ id: card.id })}>
-              <li className="flex text-black mt-2" key={card.id}>
-                <span className="mr-4">{card.name}</span>
-                <span className="mr-4">£{card.startingFromPrice}</span>
-              </li>
-            </Link>
-          )
+          <Link key={card.id} to={routes.displayCard({ id: card.id })}>
+            <li
+              className="flex text-black mt-2 justify-between font-medium"
+              key={card.id}
+            >
+              <span className="w-10/12 mr-6">{card.name}</span>
+              <span className="w-1/12">£{card.startingFromPrice}</span>
+            </li>
+          </Link>
         )
       })}
     </ul>

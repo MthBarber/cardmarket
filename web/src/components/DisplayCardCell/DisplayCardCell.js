@@ -25,7 +25,9 @@ export const Failure = ({ error }) => (
 export const Success = ({ displayCard }) => {
   return (
     <div className="flex flex-col items-center h-1/2 w-screen mb-8">
-      <div className="my-4 text-2xl font-bold">{displayCard.name}</div>
+      <div id="rajdhani" className="my-4 text-2xl font-bold">
+        {displayCard.name}
+      </div>
       <div className=" h-1/2 w-10/12 flex mt-4 justify-center">
         <div className="flex flex-col ml-auto mr-48 justify-center items-center">
           <img
@@ -36,36 +38,28 @@ export const Success = ({ displayCard }) => {
         </div>
         <div className="mt-16 mb-16 border mr-auto border-black p-4">
           <div className="font-semibold">
-            Name: <span className="font-normal">{displayCard.name}</span>
+            Name: <span id="jost">{displayCard.name}</span>
           </div>
           <div className="font-semibold">
-            Collectable's Market ID:{' '}
-            <span className="font-normal">{displayCard.id}</span>
+            Set: <span id="jost">{displayCard.setName}</span>
           </div>
           <div className="font-semibold">
-            Set: <span className="font-normal">{displayCard.setName}</span>
-          </div>
-          <div className="font-semibold">
-            Release Year:{' '}
-            <span className="font-normal">{displayCard.releaseYear}</span>
+            Release Year: <span id="jost">{displayCard.releaseYear}</span>
           </div>
           <div className="font-semibold">
             Starting from:{' '}
-            <span className="font-normal">
-              £{displayCard.startingFromPrice}
-            </span>
+            <span id="jost">£{displayCard.startingFromPrice}</span>
           </div>
           <div className="font-semibold">
-            Color Identity: <span className="font-normal"> </span>
-            <span className="font-normal">{displayCard.color}</span>
+            Color Identity: <span id="jost"> </span>
+            <span id="jost">{displayCard.color}</span>
           </div>
           <div className="font-semibold">
             Card Type:<span className="normal"> </span>
-            <span className="font-normal">{displayCard.cardType}</span>
+            <span id="jost">{displayCard.cardType}</span>
           </div>
           <div className="font-semibold">
-            Mana Value:{' '}
-            <span className="font-normal">{displayCard.manaValue}</span>
+            Mana Value: <span id="jost">{displayCard.manaValue}</span>
           </div>
           <div className="font-semibold">Rules Here:</div>
           <div className="font-semibold">Number of items for Sale:</div>

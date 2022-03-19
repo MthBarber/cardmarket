@@ -8,9 +8,9 @@ export const schema = gql`
     color: String!
     cardType: String!
     manaValue: Int!
-    releaseYear: Int!
-    cardId: Int!
-    itemsForSale: [ItemForSale!]!
+    releaseYear: Int
+    cardId: Int
+    itemsForSale: [ItemForSale!]
   }
 
   type Query {
@@ -21,6 +21,7 @@ export const schema = gql`
   input CreateCardInput {
     name: String!
     setName: String!
+    releaseYear: Int!
     startingFromPrice: Float!
     cardImage: String!
     color: String!
@@ -39,7 +40,7 @@ export const schema = gql`
   }
 
   type Mutation {
-    createCard(input: CreateCardInput!): Card! @requireAuth
+    createCard(input: CreateCardInput!): Card! @skipAuth
     updateCard(id: Int!, input: UpdateCardInput!): Card! @requireAuth
     deleteCard(id: Int!): Card! @requireAuth
   }
