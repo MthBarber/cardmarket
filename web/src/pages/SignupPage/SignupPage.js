@@ -7,6 +7,7 @@ import {
   PasswordField,
   FieldError,
   Submit,
+  EmailField,
 } from '@redwoodjs/forms'
 import { useAuth } from '@redwoodjs/auth'
 import { MetaTags } from '@redwoodjs/web'
@@ -84,7 +85,7 @@ const SignupPage = () => {
                     Email Address
                   </Label>
 
-                  <TextField
+                  <EmailField
                     name="email"
                     className="rw-input"
                     errorClassName="rw-input rw-input-error"

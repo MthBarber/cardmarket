@@ -3,8 +3,8 @@ import { useRef } from 'react'
 import {
   Form,
   Label,
-  TextField,
   PasswordField,
+  EmailField,
   Submit,
   FieldError,
 } from '@redwoodjs/forms'
@@ -59,22 +59,22 @@ const LoginPage = () => {
                     className="rw-label"
                     errorClassName="rw-label rw-label-error"
                   >
-                    Username
+                    Email
                   </Label>
-                  <TextField
+                  <EmailField
                     name="username"
                     className="rw-input"
                     errorClassName="rw-input rw-input-error"
-                    ref={usernameRef}
+                    ref={usernameRef} //changed all references from username to username
                     validation={{
                       required: {
                         value: true,
-                        message: 'Username is required',
+                        message: 'Email address is required',
                       },
                     }}
                   />
 
-                  <FieldError name="username" className="rw-field-error" />
+                  <FieldError name="email" className="rw-field-error" />
 
                   <Label
                     name="password"

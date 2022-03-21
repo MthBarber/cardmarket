@@ -22,6 +22,7 @@ model User {
   resetTokenExpiresAt DateTime?
   itemsForSale        ItemForSale[]
   location            String        @default("UK")
+  roles               String        @default("moderator")
 }
 
 model Card {

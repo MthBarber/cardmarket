@@ -2,6 +2,7 @@ export const schema = gql`
   type User {
     id: Int!
     email: String!
+    username: String!
     name: String
     hashedPassword: String!
     salt: String!

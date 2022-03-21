@@ -7,7 +7,7 @@ export const QUERY = gql`
       price
       condition
       user {
-        email
+        username
         location
       }
     }
@@ -33,7 +33,7 @@ export const Success = ({ listedSellingItems }) => {
             key={item.id}
             className="w-full flex justify-around items-start border-b border-black"
           >
-            <span className="w-1/5 text-center">{item.user.email}</span>
+            <span className="w-1/5 text-center">{item.user.username}</span>
             <span className="w-1/5 text-center">{item.user.location}</span>
             <span className="w-1/5 text-center">{item.condition}</span>
             <span className="w-1/5 text-center">{item.quantity}</span>

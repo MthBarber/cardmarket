@@ -49,7 +49,7 @@ export const handler = async (event, context) => {
     },
 
     errors: {
-      usernameOrPasswordMissing: 'Both username and password are required',
+      usernameOrPasswordMissing: 'Both username and password are required', //Error showing here
       usernameNotFound: 'Username ${username} not found',
       // For security reasons you may want to make this the same as the
       // usernameNotFound error so that a malicious user can't use the error
@@ -104,10 +104,10 @@ export const handler = async (event, context) => {
     handler: ({ username, hashedPassword, salt, userAttributes }) => {
       return db.user.create({
         data: {
-          email: username,
+          email: userAttributes.email, // email was username previously
           hashedPassword: hashedPassword,
           salt: salt,
-          // name: userAttributes.name
+          username: username,
         },
       })
     },

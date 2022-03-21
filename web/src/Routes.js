@@ -18,14 +18,14 @@ const Routes = () => {
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
       <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
       <Route path="/display-card/{id:Int}" page={DisplayCardPage} name="displayCard" />
-
-      <Set wrap={CardsLayout}>
-        <Route path="/cards/new" page={CardNewCardPage} name="newCard" />
-        <Route path="/cards/{id:Int}/edit" page={CardEditCardPage} name="editCard" />
-        <Route path="/cards/{id:Int}" page={CardCardPage} name="card" />
-        <Route path="/cards" page={CardCardsPage} name="cards" />
-      </Set>
-
+      <Private unauthenticated="home" role="admin">
+        <Set wrap={CardsLayout}>
+          <Route path="/cards/new" page={CardNewCardPage} name="newCard" />
+          <Route path="/cards/{id:Int}/edit" page={CardEditCardPage} name="editCard" />
+          <Route path="/cards/{id:Int}" page={CardCardPage} name="card" />
+          <Route path="/cards" page={CardCardsPage} name="cards" />
+        </Set>
+      </Private>
       <Route path="/" page={HomePage} name="home" />
       <Route notfound page={NotFoundPage} />
     </Router>
