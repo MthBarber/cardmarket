@@ -16,7 +16,13 @@ const HomePage = () => {
     <div className="h-screen w-screen flex flex-col justify-between bg-gray-100">
       <MetaTags title="Home" description="Home page" />
       <Header />
-
+      <div className="h-12 w-full flex justify-center my-2">
+        <Link to={routes.itemsForSale()}>
+          <button className="border-2 border-red-600 p-2 bg-red-600 text-white">
+            Your Listed Items
+          </button>
+        </Link>
+      </div>
       <section className="w-10/12 h-1/2 flex flex-col items-center justify-start text-black bg-white mx-auto">
         <h2 id="rajdhani" className="text-2xl font-bold my-6">
           Current Best Sellers!

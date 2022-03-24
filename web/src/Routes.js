@@ -13,11 +13,13 @@ import CardsLayout from 'src/layouts/CardsLayout'
 const Routes = () => {
   return (
     <Router>
+      <Route path="/items-for-sale" page={ItemsForSalePage} name="itemsForSale" />
       <Route path="/login" page={LoginPage} name="login" />
       <Route path="/signup" page={SignupPage} name="signup" />
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
       <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
       <Route path="/display-card/{id:Int}" page={DisplayCardPage} name="displayCard" />
+
       <Private unauthenticated="home" role="admin">
         <Set wrap={CardsLayout}>
           <Route path="/cards/new" page={CardNewCardPage} name="newCard" />

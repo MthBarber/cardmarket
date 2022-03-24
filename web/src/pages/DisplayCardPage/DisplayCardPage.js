@@ -14,19 +14,19 @@ const DisplayCardPage = ({ id }) => {
       </div>
       <div className="mx-auto mb-36 border-2 border-black flex-grow h-2/3 w-2/3 flex flex-col justify-between bg-white">
         <div className="h-6 w-full flex items-start justify-around bg-white">
-          <div className="w-1/5 h-6 border-r border-b  border-black font-semibold text-center">
+          <div className="w-1/4 h-6 border-r border-b  border-black font-semibold text-center">
             Seller Name
           </div>
-          <div className="w-1/5 h-6 border-r border-b border-black font-semibold text-center">
+          <div className="w-1/4 h-6 border-r border-b border-black font-semibold text-center">
             Seller Location
           </div>
-          <div className="w-1/5 h-6 border-r border-b border-black font-semibold text-center">
+          <div className="w-1/4 h-6 border-r border-b border-black font-semibold text-center">
             Condition
           </div>
-          <div className="w-1/5 h-6 border-r border-b border-black font-semibold text-center">
+          {/* <div className="w-1/5 h-6 border-r border-b border-black font-semibold text-center">
             Quantity{' '}
-          </div>
-          <div className="w-1/5 h-6 text-center border-b border-black font-semibold">
+          </div> */}
+          <div className="w-1/4 h-6 text-center border-b border-black font-semibold">
             Price
           </div>
         </div>

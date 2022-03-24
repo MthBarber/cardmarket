@@ -4,6 +4,13 @@ export const itemForSales = () => {
   return db.itemForSale.findMany()
 }
 
+//added 22/03/2022
+export const itemsForSaleUser = ({ userId }) => {
+  return db.itemForSale.findMany({
+    where: { userId },
+  })
+}
+
 //Changed from findUnique to findMany and id to cardId
 export const itemForSale = ({ cardId }) => {
   return db.itemForSale.findMany({
@@ -23,3 +30,11 @@ export const ItemForSale = {
 //    where: { cardId },
 //  })
 //}
+
+// my mutation here
+export const createItemForSale = ({ id, input }) => {
+  return db.itemForSale.create({
+    data: input,
+    where: { id },
+  })
+}

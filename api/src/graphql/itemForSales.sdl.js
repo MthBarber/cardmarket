@@ -14,6 +14,7 @@ export const schema = gql`
   type Query {
     itemForSales: [ItemForSale!]! @skipAuth
     itemForSale(cardId: Int!): [ItemForSale!]! @skipAuth
+    itemsForSaleUser(userId: Int!): [ItemForSale!]! @skipAuth
   }
 
   input CreateItemForSaleInput {
@@ -30,5 +31,12 @@ export const schema = gql`
     price: Float
     cardId: Int
     userId: Int
+  }
+
+  type Mutation {
+    createItemForSale(input: CreateItemForSaleInput!): ItemForSale! @requireAuth
+    updateItemForSale(id: Int!, input: UpdateItemForSaleInput!): ItemForSale!
+      @requireAuth
+    deleteItemForSale(id: Int!): ItemForSale! @requireAuth
   }
 `

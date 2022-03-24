@@ -25,19 +25,24 @@ export const Failure = ({ error }) => (
 )
 
 export const Success = ({ listedSellingItems }) => {
+  let sortedSellingItemsArray = []
+  listedSellingItems.forEach((item) => sortedSellingItemsArray.push(item))
+
+  sortedSellingItemsArray.sort((a, b) => a.price - b.price)
+
   return (
     <div id="jost" className="flex flex-col justify-start bg-white">
-      {listedSellingItems.map((item) => {
+      {sortedSellingItemsArray.map((item) => {
         return (
           <div
             key={item.id}
             className="w-full flex justify-around items-start border-b border-black"
           >
-            <span className="w-1/5 text-center">{item.user.username}</span>
-            <span className="w-1/5 text-center">{item.user.location}</span>
-            <span className="w-1/5 text-center">{item.condition}</span>
-            <span className="w-1/5 text-center">{item.quantity}</span>
-            <span className="w-1/5 text-center">£{item.price}</span>
+            <span className="w-1/4 text-center">{item.user.username}</span>
+            <span className="w-1/4 text-center">{item.user.location}</span>
+            <span className="w-1/4 text-center">{item.condition}</span>
+            {/* <span className="w-1/5 text-center">{item.quantity}</span> */}
+            <span className="w-1/4 text-center">£{item.price}</span>
           </div>
         )
       })}
