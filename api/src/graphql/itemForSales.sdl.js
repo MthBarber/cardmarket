@@ -21,6 +21,7 @@ export const schema = gql`
     name: String!
     quantity: Int!
     price: Float!
+    condition: String!
     cardId: Int!
     userId: Int!
   }

@@ -45,13 +45,14 @@ export const Success = ({ itemsForSaleUser }) => {
           className="flex justify-center items-center w-3/4 h-16 mt-8 border-2"
           id="jost"
         >
-          <li className="w-1/6">{itemForSale.id}</li>
-          <li className="w-1/6">{itemForSale.name}</li>
-          <li className="w-1/6">{itemForSale.quantity}</li>
-          <li className="w-1/6">{itemForSale.price}</li>
-          <li className="w-1/6">{itemForSale.condition}</li>
-          <li className="w-1/6">{itemForSale.cardId}</li>
-          <li className="w-1/6">{itemForSale.userId}</li>
+          <li className="w-1/6 text-center">Item For Sale:</li>
+          <li className="w-1/6 text-center">{itemForSale.name}</li>
+          {/* <li className="w-1/6 text-center">Qty: {itemForSale.quantity}</li> */}
+          <li className="w-1/6 text-center">Price: £{itemForSale.price}</li>
+          <li className="w-1/6 text-center">
+            Condition: {itemForSale.condition}
+          </li>
+          <li className="w-1/6 text-center">CM Number: {itemForSale.cardId}</li>
         </ul>
       ))}
     </div>

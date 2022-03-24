@@ -32,9 +32,9 @@ export const ItemForSale = {
 //}
 
 // my mutation here
-export const createItemForSale = ({ id, input }) => {
+export const createItemForSale = ({ input }) => {
   return db.itemForSale.create({
     data: input,
-    where: { id },
+    // where: { id },
   })
 }
