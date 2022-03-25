@@ -13,6 +13,7 @@ import CardsLayout from 'src/layouts/CardsLayout'
 const Routes = () => {
   return (
     <Router>
+      <Route path="/new-item-for-sale-form" page={NewItemForSaleFormPage} name="newItemForSaleForm" />
       <Route path="/items-for-sale" page={ItemsForSalePage} name="itemsForSale" />
       <Route path="/login" page={LoginPage} name="login" />
       <Route path="/signup" page={SignupPage} name="signup" />

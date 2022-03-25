@@ -7,6 +7,12 @@ const CREATE_ITEM_FOR_SALE_MUTATION = gql`
   mutation CreateItemForSaleMutation($input: CreateItemForSaleInput!) {
     createItemForSale(input: $input) {
       id
+      name
+      quantity
+      price
+      condition
+      cardId
+      userId
     }
   }
 `

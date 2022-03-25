@@ -5,8 +5,10 @@ import BestSellersCell from 'src/components/BestSellersCell'
 import NewReleasesCell from 'src/components/NewReleasesCell'
 import BestBargainsCell from 'src/components/BestBargainsCell'
 import { Footer } from 'src/components/Footer'
+import { useAuth } from '@redwoodjs/auth'
 
 const HomePage = () => {
+  const { isAuthenticated, currentUser, logOut } = useAuth()
   // function findCards() {
   // fetch('https://api.scryfall.com/cards/random')
   // .then((response) => response.json())

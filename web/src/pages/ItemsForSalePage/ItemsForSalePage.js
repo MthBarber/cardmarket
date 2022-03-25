@@ -8,6 +8,7 @@ import { useAuth } from '@redwoodjs/auth'
 
 const ItemsForSalePage = () => {
   const { isAuthenticated, currentUser, logOut } = useAuth()
+
   return (
     <div className="flex flex-col items-center justify-start w-full h-full">
       <MetaTags title="ItemsForSale" description="ItemsForSale page" />
@@ -15,7 +16,18 @@ const ItemsForSalePage = () => {
         <Header />
       </div>
       <div className="w-5/6 h-full mb-auto">
-        <ItemForSalesCell userId={currentUser.id} />
+        {isAuthenticated ? (
+          <ItemForSalesCell userId={currentUser.id} />
+        ) : (
+          <div>Nothing to show here </div>
+        )}
+      </div>
+      <div>
+        <Link to={routes.newItemForSaleForm()}>
+          <button className="border-2 border-green-600 bg-green-600 text-white p-2">
+            Add New Items To Sell
+          </button>
+        </Link>
       </div>
       <div className="absolute inset-x-0 bottom-0">
         <Footer />
