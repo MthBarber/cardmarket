@@ -39,7 +39,7 @@ export const Failure = ({ error }) => (
 export const Success = ({ itemsForSaleUser }) => {
   // <ItemForSales {itemForSales} /> original code removed temp to map over itemforsales array
   return (
-    <div className="flex flex-col justify-center h-5/6 items-center my-8 overflow-y-scroll">
+    <div className="flex flex-col justify-center h-3/4 items-center my-8">
       <h1 className="text-xl" id="rajdhani">
         Listed Items For Sale
       </h1>
@@ -49,7 +49,7 @@ export const Success = ({ itemsForSaleUser }) => {
           className="flex justify-center items-center w-3/4 h-16 mt-8 border-2"
           id="jost"
         >
-          <li className="w-1/6 text-center">Item For Sale:</li>
+          {/* <li className="w-1/6 text-center">Item For Sale:</li> */}
           <li className="w-1/6 text-center">Card Ref: {itemForSale.name}</li>
           <li className="w-1/6 text-center">
             Card Name: {itemForSale.card.name}

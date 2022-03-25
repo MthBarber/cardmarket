@@ -31,7 +31,7 @@ const ItemForSaleForm = (props) => {
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
-          Name
+          Your Reference
         </Label>
 
         <TextField
@@ -103,7 +103,7 @@ const ItemForSaleForm = (props) => {
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
-          Card id
+          Card Name
         </Label>
 
         <SelectField
