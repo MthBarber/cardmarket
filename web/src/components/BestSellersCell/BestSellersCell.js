@@ -24,7 +24,6 @@ export const Success = ({ cards }) => {
   for (let i = 0; i < 6; i++) {
     bestSellersArray.push(cards[i])
   }
-  console.log('best sellers array', bestSellersArray)
 
   return (
     <div className="flex items-center h-64 justify-around">

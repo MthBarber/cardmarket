@@ -16,7 +16,7 @@ const CREATE_ITEM_FOR_SALE_MUTATION = gql`
   }
 `
 
-const NewItemForSale = () => {
+const NewItemForSale = (currentUser) => {
   const [createItemForSale, { loading, error }] = useMutation(
     CREATE_ITEM_FOR_SALE_MUTATION,
     {
@@ -33,7 +33,7 @@ const NewItemForSale = () => {
   const onSave = (input) => {
     const castInput = Object.assign(input, {
       cardId: parseInt(input.cardId),
-      userId: parseInt(input.userId),
+      userId: currentUser.currentUser,
     })
     createItemForSale({ variables: { input: castInput } })
   }
@@ -44,7 +44,12 @@ const NewItemForSale = () => {
         <h2 className="rw-heading rw-heading-secondary ">Card Specifics</h2>
       </header>
       <div className="rw-segment-main">
-        <ItemForSaleForm onSave={onSave} loading={loading} error={error} />
+        <ItemForSaleForm
+          onSave={onSave}
+          loading={loading}
+          error={error}
+          currentUser={currentUser}
+        />
       </div>
     </div>
   )

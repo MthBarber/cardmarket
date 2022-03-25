@@ -4,8 +4,10 @@ import { Header } from 'src/components/Header'
 import { Footer } from 'src/components/Footer'
 import ItemForSaleForm from 'src/components/ItemForSale/ItemForSaleForm/ItemForSaleForm'
 import NewItemForSale from 'src/components/ItemForSale/NewItemForSale/NewItemForSale'
+import { useAuth } from '@redwoodjs/auth'
 
 const NewItemForSaleFormPage = () => {
+  const { isAuthenticated, currentUser, logOut } = useAuth()
   return (
     <div className="flex flex-col items-center h-full w-full ">
       <div className="w-full">
@@ -19,7 +21,7 @@ const NewItemForSaleFormPage = () => {
         Add New Item To Your Selling List
       </h1>
       <div className="w-1/3">
-        <NewItemForSale />
+        <NewItemForSale currentUser={currentUser.id} />
         {/* <ItemForSaleForm /> */}
       </div>
       <div className="absolute inset-x-0 bottom-0">

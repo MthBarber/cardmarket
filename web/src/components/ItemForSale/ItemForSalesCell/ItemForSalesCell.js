@@ -5,12 +5,16 @@ import ItemForSales from 'src/components/ItemForSale/ItemForSales'
 export const QUERY = gql`
   query FindItemForSales($userId: Int!) {
     itemsForSaleUser(userId: $userId) {
+      id
       name
       quantity
       price
       condition
       cardId
       userId
+      card {
+        name
+      }
     }
   }
 `
@@ -46,8 +50,10 @@ export const Success = ({ itemsForSaleUser }) => {
           id="jost"
         >
           <li className="w-1/6 text-center">Item For Sale:</li>
-          <li className="w-1/6 text-center">{itemForSale.name}</li>
-          {/* <li className="w-1/6 text-center">Qty: {itemForSale.quantity}</li> */}
+          <li className="w-1/6 text-center">Card Ref: {itemForSale.name}</li>
+          <li className="w-1/6 text-center">
+            Card Name: {itemForSale.card.name}
+          </li>
           <li className="w-1/6 text-center">Price: £{itemForSale.price}</li>
           <li className="w-1/6 text-center">
             Condition: {itemForSale.condition}

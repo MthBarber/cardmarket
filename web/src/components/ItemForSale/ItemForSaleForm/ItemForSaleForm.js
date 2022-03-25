@@ -3,6 +3,8 @@ import {
   FormError,
   FieldError,
   Label,
+  HiddenField,
+  SelectField,
   TextField,
   NumberField,
   Submit,
@@ -15,6 +17,7 @@ const ItemForSaleForm = (props) => {
 
   return (
     <div className="rw-form-wrapper">
+      {/* {console.log('current user', props.currentUser)} */}
       <Form onSubmit={onSubmit} error={props.error}>
         <FormError
           error={props.error}
@@ -103,17 +106,32 @@ const ItemForSaleForm = (props) => {
           Card id
         </Label>
 
-        <NumberField
+        <SelectField
           name="cardId"
           defaultValue={props.itemForSale?.cardId}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
-        />
+          multiple={false}
+        >
+          <option value={1}>Nashi Moon Sage's Scion </option>
+          <option value={2}>Light-Paws, Emperor's Voice </option>
+          <option value={3}>Hinata, Dawn-Crowned </option>
+          <option value={4}>Omniscience </option>
+          <option value={5}>Wheel of Fortune </option>
+          <option value={6}>Cultivator Colossus </option>
+          <option value={7}>Hex Parasite </option>
+          <option value={8}>Jeweled Lotus </option>
+          <option value={9}>Omnath, Locus of Creation </option>
+          <option value={10}>The Reality Chip </option>
+          <option value={11}>Stoneforge Mystic </option>
+          <option value={12}>Lion's Eye Diamond </option>
+          <option value={13}>Goatnapper </option>
+        </SelectField>
 
         <FieldError name="cardId" className="rw-field-error" />
 
-        <Label
+        {/* <Label
           name="userId"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
@@ -127,9 +145,9 @@ const ItemForSaleForm = (props) => {
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
-        />
+        /> */}
 
-        <FieldError name="userId" className="rw-field-error" />
+        {/* <FieldError name="userId" className="rw-field-error" /> */}
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
