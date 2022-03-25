@@ -6,7 +6,6 @@ import ItemForSaleForm from 'src/components/ItemForSale/ItemForSaleForm'
 const CREATE_ITEM_FOR_SALE_MUTATION = gql`
   mutation CreateItemForSaleMutation($input: CreateItemForSaleInput!) {
     createItemForSale(input: $input) {
-      id
       name
       quantity
       price
@@ -42,7 +41,7 @@ const NewItemForSale = () => {
   return (
     <div className="rw-segment">
       <header className="rw-segment-header">
-        <h2 className="rw-heading rw-heading-secondary">New ItemForSale</h2>
+        <h2 className="rw-heading rw-heading-secondary ">Card Specifics</h2>
       </header>
       <div className="rw-segment-main">
         <ItemForSaleForm onSave={onSave} loading={loading} error={error} />
