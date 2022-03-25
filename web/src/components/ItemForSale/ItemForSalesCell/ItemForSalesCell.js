@@ -35,7 +35,7 @@ export const Failure = ({ error }) => (
 export const Success = ({ itemsForSaleUser }) => {
   // <ItemForSales {itemForSales} /> original code removed temp to map over itemforsales array
   return (
-    <div className="flex flex-col justify-center h-5/6 items-center my-8">
+    <div className="flex flex-col justify-center h-5/6 items-center my-8 overflow-y-scroll">
       <h1 className="text-xl" id="rajdhani">
         Listed Items For Sale
       </h1>

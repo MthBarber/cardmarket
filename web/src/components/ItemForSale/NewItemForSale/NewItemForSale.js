@@ -22,7 +22,7 @@ const NewItemForSale = () => {
     {
       onCompleted: () => {
         toast.success('ItemForSale created')
-        navigate(routes.itemForSales())
+        navigate(routes.itemsForSale())
       },
       onError: (error) => {
         toast.error(error.message)

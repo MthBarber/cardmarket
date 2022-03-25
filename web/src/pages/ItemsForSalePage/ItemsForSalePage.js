@@ -15,7 +15,7 @@ const ItemsForSalePage = () => {
       <div className="w-full h-full">
         <Header />
       </div>
-      <div className="w-5/6 h-full mb-auto">
+      <div className="w-5/6 h-5/6 mb-auto">
         {isAuthenticated ? (
           <ItemForSalesCell userId={currentUser.id} />
         ) : (
@@ -24,12 +24,12 @@ const ItemsForSalePage = () => {
       </div>
       <div>
         <Link to={routes.newItemForSaleForm()}>
-          <button className="border-2 border-green-600 bg-green-600 text-white p-2">
+          <button className="border-2 border-green-600 bg-green-600 text-white p-2 my-4">
             Add New Items To Sell
           </button>
         </Link>
       </div>
-      <div className="absolute inset-x-0 bottom-0">
+      <div className="absolute mt-8 inset-x-0 bottom-0">
         <Footer />
       </div>
     </div>
