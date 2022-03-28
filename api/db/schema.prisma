@@ -23,6 +23,7 @@ model User {
   itemsForSale        ItemForSale[]
   location            String        @default("UK")
   roles               String        @default("moderator")
+  orderItems          OrderItem[]
 }
 
 model Card {
@@ -39,13 +40,23 @@ model Card {
 }
 
 model ItemForSale {
-  id        Int    @id @default(autoincrement())
-  name      String
-  quantity  Int
-  price     Float
-  condition String @default("NM")
-  card      Card   @relation(fields: [cardId], references: [id])
-  cardId    Int
-  user      User   @relation(fields: [userId], references: [id])
-  userId    Int
+  id         Int         @id @default(autoincrement())
+  cardRef    String      @default("Customer Reference")
+  quantity   Int
+  price      Float
+  condition  String      @default("NM")
+  card       Card        @relation(fields: [cardId], references: [id])
+  cardId     Int
+  user       User        @relation(fields: [userId], references: [id])
+  userId     Int
+  orderItems OrderItem[]
+}
+
+model OrderItem {
+  id              Int         @id @default(autoincrement())
+  user            User        @relation(fields: [buyerId], references: [id])
+  buyerId         Int
+  itemForSale     ItemForSale @relation(fields: [orderItemId], references: [id])
+  orderItemId     Int
+  orderItemStatus String
 }

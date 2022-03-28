@@ -78,7 +78,7 @@ const ItemForSale = ({ itemForSale }) => {
             </tr>
             <tr>
               <th>Name</th>
-              <td>{itemForSale.name}</td>
+              <td>{itemForSale.cardRef}</td>
             </tr>
             <tr>
               <th>Quantity</th>

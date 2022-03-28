@@ -6,7 +6,7 @@ import ItemForSaleForm from 'src/components/ItemForSale/ItemForSaleForm'
 const CREATE_ITEM_FOR_SALE_MUTATION = gql`
   mutation CreateItemForSaleMutation($input: CreateItemForSaleInput!) {
     createItemForSale(input: $input) {
-      name
+      cardRef
       quantity
       price
       condition

@@ -6,7 +6,7 @@ export const QUERY = gql`
   query FindItemForSales($userId: Int!) {
     itemsForSaleUser(userId: $userId) {
       id
-      name
+      cardRef
       quantity
       price
       condition
@@ -50,7 +50,7 @@ export const Success = ({ itemsForSaleUser }) => {
           id="jost"
         >
           {/* <li className="w-1/6 text-center">Item For Sale:</li> */}
-          <li className="w-1/6 text-center">Card Ref: {itemForSale.name}</li>
+          <li className="w-1/6 text-center">Card Ref: {itemForSale.cardRef}</li>
           <li className="w-1/6 text-center">
             Card Name: {itemForSale.card.name}
           </li>

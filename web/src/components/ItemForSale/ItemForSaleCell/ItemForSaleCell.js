@@ -4,7 +4,7 @@ export const QUERY = gql`
   query FindItemForSaleById($id: Int!) {
     itemForSale: itemForSale(id: $id) {
       id
-      name
+      cardRef
       quantity
       price
       condition

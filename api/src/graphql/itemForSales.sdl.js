@@ -1,7 +1,7 @@
 export const schema = gql`
   type ItemForSale {
     id: Int!
-    name: String!
+    cardRef: String!
     quantity: Int!
     price: Float!
     card: Card!
@@ -18,7 +18,7 @@ export const schema = gql`
   }
 
   input CreateItemForSaleInput {
-    name: String!
+    cardRef: String!
     quantity: Int!
     price: Float!
     condition: String!
@@ -27,7 +27,7 @@ export const schema = gql`
   }
 
   input UpdateItemForSaleInput {
-    name: String
+    cardRef: String
     quantity: Int
     price: Float
     cardId: Int

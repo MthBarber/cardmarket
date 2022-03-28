@@ -26,7 +26,7 @@ const ItemForSaleForm = (props) => {
         />
 
         <Label
-          name="name"
+          name="cardRef"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
@@ -34,14 +34,14 @@ const ItemForSaleForm = (props) => {
         </Label>
 
         <TextField
-          name="name"
-          defaultValue={props.itemForSale?.name}
+          name="cardRef"
+          defaultValue={props.itemForSale?.cardRef}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
         />
 
-        <FieldError name="name" className="rw-field-error" />
+        <FieldError name="cardRef" className="rw-field-error" />
 
         <Label
           name="quantity"

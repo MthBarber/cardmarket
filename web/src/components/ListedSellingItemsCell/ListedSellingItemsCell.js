@@ -2,7 +2,7 @@ export const QUERY = gql`
   query ListedSellingItemsQuery($cardId: Int!) {
     listedSellingItems: itemForSale(cardId: $cardId) {
       id
-      name
+      cardRef
       quantity
       price
       condition
