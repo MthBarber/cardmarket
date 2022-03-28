@@ -17,7 +17,6 @@ const ItemForSaleForm = (props) => {
 
   return (
     <div className="rw-form-wrapper">
-      {/* {console.log('current user', props.currentUser)} */}
       <Form onSubmit={onSubmit} error={props.error}>
         <FormError
           error={props.error}
