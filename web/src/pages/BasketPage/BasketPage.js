@@ -8,16 +8,29 @@ import { useAuth } from '@redwoodjs/auth'
 const BasketPage = () => {
   const { isAuthenticated, currentUser } = useAuth()
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col items-center justify-start h-screen bg-gray-100">
       <MetaTags title="Basket" description="Basket page" />
-      <div className="w-full">
+      <div className="w-full bg-white">
         <Header />
       </div>
-      <div className="w-full h-3/4 flex flex-col justify-center items-center">
-        <h1 className="mb-8">Basket Items</h1>
-        <div className="border-2 border-grey w-3/4 h-3/4">
+      <div className="w-3/4 h-2/3 flex flex-col justify-center items-center bg-white mt-2">
+        <h1 id="rajdhani" className="mb-6 mt-2 text-xl">
+          Basket Items
+        </h1>
+        <div
+          id="jost"
+          className="border-2  w-3/4 h-3/4  flex flex-col justify-start"
+        >
           {isAuthenticated ? (
-            <BasketItemsCell buyerId={currentUser.id} />
+            <div className="h-full">
+              <div className="flex justify-around border-b mb-2">
+                <span>Name</span>
+                <span>Condition</span>
+                <span>Quantity</span>
+                <span>Price</span>
+              </div>
+              <BasketItemsCell buyerId={currentUser.id} />
+            </div>
           ) : (
             <div> Nothing to show here </div>
           )}
