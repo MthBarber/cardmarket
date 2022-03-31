@@ -18,11 +18,33 @@ export const itemForSale = ({ cardId }) => {
   })
 }
 
+//new query added 30/3/2022 where correct plural was added in the SDL
+export const itemsForSale = ({ cardId }) => {
+  return db.itemForSale.findMany({
+    where: { cardId },
+  })
+}
+
+export const cardListingItemsForSale = ({ cardId }) => {
+  return db.itemForSale.findMany({
+    where: {
+      cardId,
+      orderItems: {
+        every: {
+          orderItemStatus: 'InBasket',
+        },
+      },
+    },
+  })
+}
+
 export const ItemForSale = {
   card: (_obj, { root }) =>
     db.itemForSale.findUnique({ where: { id: root.id } }).card(),
   user: (_obj, { root }) =>
     db.itemForSale.findUnique({ where: { id: root.id } }).user(),
+  orderItems: (_obj, { root }) =>
+    db.itemForSale.findUnique({ where: { id: root.id } }).orderItems(),
 }
 // custom service
 //export const itemsForSale = (cardId) => {

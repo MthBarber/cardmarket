@@ -4,18 +4,19 @@ export const schema = gql`
     user: User!
     buyerId: Int!
     itemForSale: ItemForSale!
-    orderItemId: Int!
+    itemForSaleId: Int!
     orderItemStatus: String!
   }
 
   type Query {
-    orderItems: [OrderItem!]! @requireAuth
-    orderItem(id: Int!): OrderItem @requireAuth
+    orderItems: [OrderItem!]! @skipAuth
+    orderItem(id: Int!): OrderItem @skipAuth
+    basketOrderItems(buyerId: Int!): [OrderItem] @skipAuth
   }
 
   input CreateOrderItemInput {
     buyerId: Int!
-    orderItemId: Int!
+    itemForSaleId: Int!
     orderItemStatus: String!
   }
 
@@ -26,7 +27,7 @@ export const schema = gql`
   }
 
   type Mutation {
-    createOrderItem(input: CreateOrderItemInput!): OrderItem! @requireAuth
+    createOrderItem(input: CreateOrderItemInput!): OrderItem! @skipAuth
     updateOrderItem(id: Int!, input: UpdateOrderItemInput!): OrderItem!
       @requireAuth
     deleteOrderItem(id: Int!): OrderItem! @requireAuth

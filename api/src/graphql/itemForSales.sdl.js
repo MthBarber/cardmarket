@@ -9,12 +9,15 @@ export const schema = gql`
     user: User!
     userId: Int!
     condition: String!
+    orderItems: [OrderItem]
   }
 
   type Query {
     itemForSales: [ItemForSale!]! @skipAuth
-    itemForSale(cardId: Int!): [ItemForSale!]! @skipAuth
+    itemForSale(id: Int!): ItemForSale! @skipAuth
+    itemsForSale(cardId: Int!): [ItemForSale!]! @skipAuth
     itemsForSaleUser(userId: Int!): [ItemForSale!]! @skipAuth
+    cardListingItemsForSale(cardId: Int!): [ItemForSale!]! @skipAuth
   }
 
   input CreateItemForSaleInput {

@@ -21,6 +21,11 @@ export function Header() {
         <li>Decks</li>
         <li>Deckboxes</li>
       </ul>
+      <Link to={routes.basket()}>
+        <div className="mx-8 border-2 border-white p-1">
+          <button>Basket</button>
+        </div>
+      </Link>
       {isAuthenticated ? (
         <div className="mr-8">
           <span id="rajdhani-400">Logged in as {currentUser.username}</span>{' '}

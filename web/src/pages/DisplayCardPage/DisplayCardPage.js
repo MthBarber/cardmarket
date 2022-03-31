@@ -3,8 +3,13 @@ import DisplayCardCell from 'src/components/DisplayCardCell/DisplayCardCell'
 import { Header } from 'src/components/Header'
 import { Footer } from 'src/components/Footer'
 import ListedSellingItemsCell from 'src/components/ListedSellingItemsCell/ListedSellingItemsCell'
+import React from 'react'
 
 const DisplayCardPage = ({ id }) => {
+  const [orderPopupState, changeOrderPopupState] = React.useState(false)
+  function PopupStateChange() {
+    changeOrderPopupState((prevState) => !prevState)
+  }
   return (
     <div className="h-full w-screen pb-16 bg-gray-100">
       <Header />
@@ -13,21 +18,24 @@ const DisplayCardPage = ({ id }) => {
         <DisplayCardCell id={id} />
       </div>
       <div className="mx-auto mb-36 border-2 border-black flex-grow h-2/3 w-2/3 flex flex-col justify-between bg-white">
-        <div className="h-6 w-full flex items-start justify-around bg-white">
-          <div className="w-1/4 h-6 border-r border-b  border-black font-semibold text-center">
+        <div className="h-6 w-full flex items-start justify-start bg-white">
+          <div className="w-1/5 h-6 border-r border-b  border-black font-semibold text-center">
             Seller Name
           </div>
-          <div className="w-1/4 h-6 border-r border-b border-black font-semibold text-center">
+          <div className="w-1/5 h-6 border-r border-b border-black font-semibold text-center">
             Seller Location
           </div>
-          <div className="w-1/4 h-6 border-r border-b border-black font-semibold text-center">
+          <div className="w-1/5 h-6 border-r border-b border-black font-semibold text-center">
             Condition
           </div>
           {/* <div className="w-1/5 h-6 border-r border-b border-black font-semibold text-center">
             Quantity{' '}
           </div> */}
-          <div className="w-1/4 h-6 text-center border-b border-black font-semibold">
+          <div className="w-1/5 h-6 text-center border-b border-black border-r font-semibold">
             Price
+          </div>
+          <div className="w-1/5 h-6 border-b text-center border-black font-semibold">
+            Availability
           </div>
         </div>
         <div className="bg-gray-100 h-full">

@@ -4,6 +4,13 @@ export const orderItems = () => {
   return db.orderItem.findMany()
 }
 
+//Add Query for basketItems
+export const basketOrderItems = ({ buyerId }) => {
+  return db.orderItem.findMany({
+    where: { buyerId },
+  })
+}
+
 export const orderItem = ({ id }) => {
   return db.orderItem.findUnique({
     where: { id },

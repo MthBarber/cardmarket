@@ -1,6 +1,11 @@
+import { Link, routes } from '@redwoodjs/router'
+import React from 'react'
+import { AddCardToOrderItems } from 'src/components/AddCardToOrderItems'
+import { AddToBasketButton } from 'src/components/AddToBasketButton'
+
 export const QUERY = gql`
   query ListedSellingItemsQuery($cardId: Int!) {
-    listedSellingItems: itemForSale(cardId: $cardId) {
+    listedSellingItems: cardListingItemsForSale(cardId: $cardId) {
       id
       cardRef
       quantity
@@ -9,6 +14,9 @@ export const QUERY = gql`
       user {
         username
         location
+      }
+      orderItems {
+        orderItemStatus
       }
     }
   }
@@ -25,6 +33,7 @@ export const Failure = ({ error }) => (
 )
 
 export const Success = ({ listedSellingItems }) => {
+  // console.log(listedSellingItems)
   let sortedSellingItemsArray = []
   listedSellingItems.forEach((item) => sortedSellingItemsArray.push(item))
 
@@ -36,13 +45,23 @@ export const Success = ({ listedSellingItems }) => {
         return (
           <div
             key={item.id}
-            className="w-full flex justify-around items-start border-b border-black"
+            className="w-full flex justify-around items-center border-b border-black"
           >
-            <span className="w-1/4 text-center">{item.user.username}</span>
-            <span className="w-1/4 text-center">{item.user.location}</span>
-            <span className="w-1/4 text-center">{item.condition}</span>
-            {/* <span className="w-1/5 text-center">{item.quantity}</span> */}
-            <span className="w-1/4 text-center">£{item.price}</span>
+            <span className="w-1/5 h-8 flex items-center justify-center text-center">
+              {item.user.username}
+            </span>
+            <span className="w-1/5 h-8 flex items-center justify-center text-center">
+              {item.user.location}
+            </span>
+            <span className="w-1/5 h-8 flex items-center justify-center text-center">
+              {item.condition}
+            </span>
+            <span className="w-1/5 h-8 flex items-center justify-center text-center">
+              £{item.price}
+            </span>
+            <span className="w-1/5 h-8 flex items-center justify-center text-center">
+              <AddToBasketButton item={item} />
+            </span>
           </div>
         )
       })}
