@@ -13,29 +13,37 @@ const BasketPage = () => {
       <div className="w-full bg-white">
         <Header />
       </div>
-      <div className="w-3/4 h-2/3 flex flex-col justify-center items-center bg-white mt-2">
-        <h1 id="rajdhani" className="mb-6 mt-2 text-xl">
+      <div className="w-3/4 h-full flex flex-col justify-start items-center bg-white mt-4 mb-20">
+        <h1 id="rajdhani" className="mb-6 mt-8 text-2xl">
           Basket Items
         </h1>
         <div
           id="jost"
-          className="border-2  w-3/4 h-3/4  flex flex-col justify-start"
+          className="border-2  w-3/4 h-2/3  flex flex-col justify-start"
         >
           {isAuthenticated ? (
             <div className="h-full">
-              <div className="flex justify-around border-b mb-2">
+              <div className="flex justify-around  mb-2">
                 <span>Name</span>
                 <span>Condition</span>
                 <span>Quantity</span>
                 <span>Price</span>
               </div>
-              <BasketItemsCell buyerId={currentUser.id} />
+              <div className="border-t h-full flex flex-col justify-between">
+                <BasketItemsCell buyerId={currentUser.id} />
+              </div>
             </div>
           ) : (
             <div> Nothing to show here </div>
           )}
         </div>
+        <div className="w-3/4 flex justify-end mt-2">
+          <button className="border-2 bg-green-500 border-green-500 flex justify-end px-2">
+            Complete Purchase
+          </button>
+        </div>
       </div>
+
       <div className="absolute mt-8 inset-x-0 bottom-0">
         <Footer />
       </div>

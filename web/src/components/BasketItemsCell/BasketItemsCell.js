@@ -34,17 +34,19 @@ export const Success = ({ itemsInBasket }) => {
           }
           return (
             <span
-              className="w-full h-12 flex justify-around"
+              className="w-full h-8 flex justify-around items-center border-b"
               key={item.itemForSale.id}
             >
-              <li className="h-12 w-1/4 text-center">
+              <li className="h-8 w-1/4 text-center flex flex-col justify-center">
                 {item.itemForSale.card.name}
               </li>
-              <li className="h-12 w-1/4 text-center">
+              <li className="h-8 w-1/4 text-center flex flex-col justify-center">
                 {item.itemForSale.condition}
               </li>
-              <li className="h-12 w-1/4 text-center">1</li>
-              <li className="h-12 w-1/4 text-center">
+              <li className="h-8 w-1/4 text-center flex flex-col justify-center">
+                1
+              </li>
+              <li className="h-8 w-1/4 text-center flex flex-col justify-center">
                 £{item.itemForSale.price.toFixed(2)}
               </li>
             </span>
