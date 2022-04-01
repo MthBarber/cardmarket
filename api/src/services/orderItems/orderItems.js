@@ -29,6 +29,13 @@ export const updateOrderItem = ({ id, input }) => {
     where: { id },
   })
 }
+//custom mutation for altering basket items
+export const removeBasketOrderItem = ({ itemForSaleId, input }) => {
+  return db.orderItem.update({
+    data: input,
+    where: { itemForSaleId },
+  })
+}
 
 export const deleteOrderItem = ({ id }) => {
   return db.orderItem.delete({

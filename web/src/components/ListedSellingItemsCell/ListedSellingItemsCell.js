@@ -57,7 +57,7 @@ export const Success = ({ listedSellingItems }) => {
               {item.condition}
             </span>
             <span className="w-1/5 h-8 flex items-center justify-center text-center">
-              £{item.price}
+              £{item.price.toFixed(2)}
             </span>
             <span className="w-1/5 h-8 flex items-center justify-center text-center">
               <AddToBasketButton item={item} />

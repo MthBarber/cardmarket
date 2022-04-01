@@ -38,7 +38,9 @@ export const Success = ({ cards }) => {
               key={card.id}
             >
               <span className="w-10/12 mr-6">{card.name}</span>
-              <span className="w-1/12">£{card.startingFromPrice}</span>
+              <span className="w-1/12">
+                £{card.startingFromPrice.toFixed(2)}
+              </span>
             </li>
           </Link>
         )

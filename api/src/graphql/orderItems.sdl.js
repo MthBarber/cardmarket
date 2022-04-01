@@ -30,6 +30,10 @@ export const schema = gql`
     createOrderItem(input: CreateOrderItemInput!): OrderItem! @skipAuth
     updateOrderItem(id: Int!, input: UpdateOrderItemInput!): OrderItem!
       @requireAuth
+    removeBasketOrderItem(
+      itemForSaleId: Int!
+      input: UpdateOrderItemInput!
+    ): OrderItem! @skipAuth
     deleteOrderItem(id: Int!): OrderItem! @requireAuth
   }
 `

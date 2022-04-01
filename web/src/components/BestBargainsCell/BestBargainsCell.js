@@ -33,7 +33,9 @@ export const Success = ({ cards }) => {
           <Link key={card.id} to={routes.displayCard({ id: card.id })}>
             <li className="flex w-full justify-between mt-2 font-medium">
               <span className="w-10/12 mr-6">{card.name}</span>
-              <span className="w-1/12">£{card.startingFromPrice}</span>
+              <span className="w-1/12">
+                £{card.startingFromPrice.toFixed(2)}
+              </span>
             </li>
           </Link>
         )

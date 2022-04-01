@@ -1,3 +1,5 @@
+import { RemoveFromBasketButton } from 'src/components/RemoveFromBasketButton'
+
 export const QUERY = gql`
   query BasketItemsQuery($buyerId: Int!) {
     itemsInBasket: basketOrderItems(buyerId: $buyerId) {
@@ -34,7 +36,7 @@ export const Success = ({ itemsInBasket }) => {
           }
           return (
             <span
-              className="w-full h-8 flex justify-around items-center border-b"
+              className="w-full h-8 flex justify-around items-center border-b border-black"
               key={item.itemForSale.id}
             >
               <li className="h-8 w-1/4 text-center flex flex-col justify-center">
@@ -49,12 +51,15 @@ export const Success = ({ itemsInBasket }) => {
               <li className="h-8 w-1/4 text-center flex flex-col justify-center">
                 £{item.itemForSale.price.toFixed(2)}
               </li>
+              <li className="h-8 text-center flex flex-col justify-center mr-2">
+                <RemoveFromBasketButton itemId={item.itemForSale.id} />
+              </li>
             </span>
           )
         })}
       </ul>
       <div className="flex justify-end self-end ">
-        <span className=" w-36 border-t border-l pr-4 flex justify-center text-center">
+        <span className=" w-48 mb-4  pr-16  flex justify-center text-center">
           Total: £{totalCost.toFixed(2)}
         </span>
       </div>

@@ -19,17 +19,25 @@ const BasketPage = () => {
         </h1>
         <div
           id="jost"
-          className="border-2  w-3/4 h-2/3  flex flex-col justify-start"
+          className="border-2 border-black w-3/4 h-2/3  flex flex-col justify-start"
         >
           {isAuthenticated ? (
             <div className="h-full">
-              <div className="flex justify-around  mb-2">
-                <span>Name</span>
-                <span>Condition</span>
-                <span>Quantity</span>
-                <span>Price</span>
+              <div className="flex justify-around mt-2 mb-2">
+                <span className="text-lg w-1/4 text-center font-medium">
+                  Item
+                </span>
+                <span className="text-lg w-1/4 text-center font-medium">
+                  Condition
+                </span>
+                <span className="text-lg w-1/4 text-center font-medium">
+                  Quantity
+                </span>
+                <span className="text-lg w-1/4 text-center mr-8 font-medium">
+                  Price
+                </span>
               </div>
-              <div className="border-t h-full flex flex-col justify-between">
+              <div className="border-t border-black h-full flex flex-col justify-between">
                 <BasketItemsCell buyerId={currentUser.id} />
               </div>
             </div>
@@ -38,7 +46,7 @@ const BasketPage = () => {
           )}
         </div>
         <div className="w-3/4 flex justify-end mt-2">
-          <button className="border-2 bg-green-500 border-green-500 flex justify-end px-2">
+          <button className="border-2 bg-green-500 border-green-500 flex justify-end px-2 text-white text-lg font-bold">
             Complete Purchase
           </button>
         </div>
