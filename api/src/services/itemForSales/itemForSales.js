@@ -31,7 +31,7 @@ export const cardListingItemsForSale = ({ cardId }) => {
       cardId,
       orderItems: {
         every: {
-          orderItemStatus: 'InBasket',
+          orderItemStatus: 'RemovedFromBasket', //was previously InBasket
         },
       },
     },

@@ -26,13 +26,19 @@ export const schema = gql`
     orderItemStatus: String
   }
 
+  # Custom input for removing item from basket
+  input RemoveOrderItemInput {
+    orderItemStatus: String
+  }
+
   type Mutation {
     createOrderItem(input: CreateOrderItemInput!): OrderItem! @skipAuth
     updateOrderItem(id: Int!, input: UpdateOrderItemInput!): OrderItem!
       @requireAuth
-    removeBasketOrderItem(
+    # Attempt to use RemoveOrderItem in the future
+    removeOrderItem(
       itemForSaleId: Int!
-      input: UpdateOrderItemInput!
+      input: RemoveOrderItemInput!
     ): OrderItem! @skipAuth
     deleteOrderItem(id: Int!): OrderItem! @requireAuth
   }

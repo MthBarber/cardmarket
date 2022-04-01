@@ -1,6 +1,6 @@
 import { Link, routes } from '@redwoodjs/router'
 import React from 'react'
-import { AddCardToOrderItems } from 'src/components/AddCardToOrderItems'
+
 import { AddToBasketButton } from 'src/components/AddToBasketButton'
 
 export const QUERY = gql`
@@ -33,7 +33,7 @@ export const Failure = ({ error }) => (
 )
 
 export const Success = ({ listedSellingItems }) => {
-  // console.log(listedSellingItems)
+  console.log('Listed sellingItems', listedSellingItems)
   let sortedSellingItemsArray = []
   listedSellingItems.forEach((item) => sortedSellingItemsArray.push(item))
 

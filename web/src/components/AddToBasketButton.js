@@ -16,7 +16,7 @@ const ADD_CARD_TO_BASKET = gql`
 `
 
 export function AddToBasketButton({ item }) {
-  const { isAuthenticated, currentUser, logOut } = useAuth()
+  const { isAuthenticated, currentUser } = useAuth()
 
   const [create, { loading, error }] = useMutation(ADD_CARD_TO_BASKET, {
     onCompleted: () => {
@@ -36,22 +36,12 @@ export function AddToBasketButton({ item }) {
       },
     })
   }
-  function Click() {
-    console.log(
-      item.id,
-      '£',
-      item.price,
-      item.condition,
-      item.user.username,
-      ' Ow you clicked me'
-    )
-  }
 
   return (
     <>
-      {console.log(item)}
       <Toaster />
-      {item.orderItems.length > 0 ? (
+      {item.orderItems.length > 0 &&
+      item.orderItems[0].orderItemStatus == 'InBasket' ? (
         <button className="bg-red-500 border-2 px-2 border-red-500">
           In Basket
         </button>

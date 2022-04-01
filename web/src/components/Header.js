@@ -57,7 +57,7 @@ export function Header() {
         </div>
       ) : (
         <Link span id="rajdhani-400" to={routes.login()}>
-          <button className="mr-8 h-8 border-2 border-black rounded-md  bg-white text-black">
+          <button className="mr-8 h-8 w-16 border-2 border-black rounded-md  bg-white text-black">
             Login{' '}
           </button>
         </Link>

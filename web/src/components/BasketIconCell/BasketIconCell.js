@@ -24,10 +24,18 @@ export const Failure = ({ error }) => (
 )
 
 export const Success = ({ basketIcon }) => {
-  if (basketIcon.length > 0) {
+  let basketItems = []
+
+  for (let i = 0; i < basketIcon.length; i++) {
+    if (basketIcon[i].orderItemStatus == 'InBasket') {
+      basketItems.push(basketIcon[i])
+    }
+  }
+
+  if (basketItems.length > 0) {
     return (
       <span className=" w-4 h-4 bg-red-500 text-white text-xs rounded-xl text-center flex justify-center items-center">
-        {basketIcon.length}
+        {basketItems.length}
       </span>
     )
   } else {
