@@ -1,6 +1,7 @@
 import { useMutation } from '@redwoodjs/web'
 import { useAuth } from '@redwoodjs/auth'
 import { toast, Toaster } from '@redwoodjs/web/dist/toast'
+import { ItemsInBasketQuery } from 'src/components/BasketItemsCell/BasketItemsCell'
 
 const REMOVE_FROM_BASKET = gql`
   mutation updateOrderItem($id: Int!, $input: UpdateOrderItemInput!) {
@@ -17,6 +18,7 @@ export function RemoveFromBasketButton({ itemId }) {
     onCompleted: () => {
       toast.success('Card removed from basket')
     },
+    refetchQueries: [ItemsInBasketQuery],
   })
 
   const onSubmit = () => {
@@ -24,7 +26,7 @@ export function RemoveFromBasketButton({ itemId }) {
       variables: {
         id: itemId,
         input: {
-          orderItemStatus: 'RemovedFromBasket',
+          orderItemStatus: '', //changed from RemoveFromBasket
         },
       },
     })

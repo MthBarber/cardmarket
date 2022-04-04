@@ -1,4 +1,3 @@
-import { Link, routes } from '@redwoodjs/router'
 import React from 'react'
 
 import { AddToBasketButton } from 'src/components/AddToBasketButton'
@@ -16,6 +15,7 @@ export const QUERY = gql`
         location
       }
       orderItems {
+        id
         orderItemStatus
       }
     }
@@ -33,7 +33,7 @@ export const Failure = ({ error }) => (
 )
 
 export const Success = ({ listedSellingItems }) => {
-  console.log('Listed sellingItems', listedSellingItems)
+  // console.log('Listed sellingItems', listedSellingItems)
   let sortedSellingItemsArray = []
   listedSellingItems.forEach((item) => sortedSellingItemsArray.push(item))
 

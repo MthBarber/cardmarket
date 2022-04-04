@@ -45,11 +45,11 @@ const BasketPage = () => {
             <div> Nothing to show here </div>
           )}
         </div>
-        <div className="w-3/4 flex justify-end mt-2">
-          <button className="border-2 bg-green-500 border-green-500 flex justify-end px-2 text-white text-lg font-bold">
-            Complete Purchase
-          </button>
-        </div>
+        {/* <div className="w-3/4 flex justify-end mt-2">
+          {isAuthenticated ? (
+            <CompletePurchaseButton buyerId={currentUser.id} />
+          ) : null}
+        </div> */}
       </div>
 
       <div className="absolute mt-8 inset-x-0 bottom-0">

@@ -1,3 +1,5 @@
+export { QUERY as BasketIconUpdate }
+
 export const QUERY = gql`
   query FindBasketIconQuery($buyerId: Int!) {
     basketIcon: basketOrderItems(buyerId: $buyerId) {

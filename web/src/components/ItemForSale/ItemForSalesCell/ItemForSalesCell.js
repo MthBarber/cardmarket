@@ -15,6 +15,9 @@ export const QUERY = gql`
       card {
         name
       }
+      orderItems {
+        orderItemStatus
+      }
     }
   }
 `
@@ -38,6 +41,7 @@ export const Failure = ({ error }) => (
 
 export const Success = ({ itemsForSaleUser }) => {
   // <ItemForSales {itemForSales} /> original code removed temp to map over itemforsales array
+  console.log(itemsForSaleUser)
   return (
     <div className="flex flex-col justify-center h-3/4 items-center my-8">
       <h1 className="text-xl" id="rajdhani">
@@ -58,7 +62,14 @@ export const Success = ({ itemsForSaleUser }) => {
           <li className="w-1/6 text-center">
             Condition: {itemForSale.condition}
           </li>
-          <li className="w-1/6 text-center">CM Number: {itemForSale.cardId}</li>
+          <li className="w-1/6 text-center">
+            {itemForSale.orderItems.length === 0
+              ? 'Unsold'
+              : itemForSale.orderItems.length > 0 &&
+                itemForSale.orderItems[0].orderItemStatus == ''
+              ? 'Unsold'
+              : 'Sold'}
+          </li>
         </ul>
       ))}
     </div>

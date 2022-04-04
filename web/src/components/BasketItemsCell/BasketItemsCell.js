@@ -1,4 +1,5 @@
 import { RemoveFromBasketButton } from 'src/components/RemoveFromBasketButton'
+import { CompletePurchaseButton } from 'src/components/CompletePurchaseButton'
 export { QUERY as ItemsInBasketQuery }
 
 export const QUERY = gql`
@@ -28,13 +29,6 @@ export const Failure = ({ error }) => (
 )
 
 export const Success = ({ itemsInBasket }) => {
-  //   let basketItems = []
-  // for (let i = 0; i < itemsInBasket.length; i++){
-  //   if (itemsInBasket.orderItemStatus = "InBasket"){
-
-  //   }
-  // }
-
   let totalCost = 0
   return (
     <div className="flex flex-col h-full justify-start gap-y-5">
@@ -75,6 +69,9 @@ export const Success = ({ itemsInBasket }) => {
         <span className=" w-48 mb-4  pr-16  flex justify-center text-center">
           Total: £{totalCost.toFixed(2)}
         </span>
+      </div>
+      <div className="w-full flex justify-end mt-2">
+        <CompletePurchaseButton completeBasketItems={itemsInBasket} />
       </div>
     </div>
   )
