@@ -31,6 +31,7 @@ export const Success = ({ cards }) => {
         return (
           <div
             key={card.id}
+            id="text-gray"
             className="flex items-center h-48 justify-between text-sm text-black mx-6"
           >
             <Link

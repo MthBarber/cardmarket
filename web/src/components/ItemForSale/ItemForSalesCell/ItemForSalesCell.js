@@ -1,7 +1,5 @@
 import { Link, routes } from '@redwoodjs/router'
 
-import ItemForSales from 'src/components/ItemForSale/ItemForSales'
-
 export const QUERY = gql`
   query FindItemForSales($userId: Int!) {
     itemsForSaleUser(userId: $userId) {

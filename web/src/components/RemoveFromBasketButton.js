@@ -12,9 +12,9 @@ const REMOVE_FROM_BASKET = gql`
 `
 
 export function RemoveFromBasketButton({ itemId }) {
-  const { isAuthenticated, currentUser } = useAuth()
+  const { isAuthenticated } = useAuth()
 
-  const [update, { loading, error }] = useMutation(REMOVE_FROM_BASKET, {
+  const [update] = useMutation(REMOVE_FROM_BASKET, {
     onCompleted: () => {
       toast.success('Card removed from basket')
     },

@@ -25,7 +25,10 @@ export const Failure = ({ error }) => (
 export const Success = ({ displayCard }) => {
   return (
     <div className="flex flex-col items-center h-1/2 w-screen mb-8">
-      <div id="rajdhani" className="my-4 text-2xl font-bold">
+      <div
+        id="rajdhani"
+        className="my-4 text-2xl text-emerald-600 underline font-bold"
+      >
         {displayCard.name}
       </div>
       <div className=" h-1/2 w-10/12 flex mt-4 justify-center">

@@ -1,5 +1,5 @@
 import { useMutation } from '@redwoodjs/web'
-import { toast, Toaster } from '@redwoodjs/web/dist/toast'
+import { toast } from '@redwoodjs/web/dist/toast'
 import { ItemsInBasketQuery } from 'src/components/BasketItemsCell/BasketItemsCell'
 
 const CHANGE_TO_COMPLETE = gql`
@@ -11,7 +11,7 @@ const CHANGE_TO_COMPLETE = gql`
 `
 
 export function CompletePurchaseButton({ completeBasketItems }) {
-  const [update, { loading, error }] = useMutation(CHANGE_TO_COMPLETE, {
+  const [update] = useMutation(CHANGE_TO_COMPLETE, {
     onCompleted: () => {},
     refetchQueries: [ItemsInBasketQuery],
   })

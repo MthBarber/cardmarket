@@ -1,4 +1,3 @@
-import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 import { Footer } from 'src/components/Footer'
 import { Header } from 'src/components/Header'

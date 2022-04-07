@@ -11,7 +11,7 @@ export function Header() {
         id="rajdhani"
         className="ml-4 text-2xl tracking-wide font-medium uppercase"
       >
-        <Link to={routes.home()}>Collectable's Market</Link>
+        <Link to={routes.home()}>MTG Marketplace</Link>
       </h1>
       <ul
         id="rajdhani"
@@ -48,7 +48,7 @@ export function Header() {
         <div className="mr-8">
           <span id="rajdhani-400">Logged in as {currentUser.username}</span>{' '}
           <button
-            className="border-2 h-8 border-gray-600   m-2 w-20 rounded-md bg-white text-black md:shadow-md"
+            className="border-2 h-8 border-gray-600 m-2 w-20 rounded-md bg-white text-black md:shadow-md"
             type="button"
             onClick={logOut}
           >

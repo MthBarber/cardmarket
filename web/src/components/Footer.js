@@ -1,10 +1,12 @@
 export function Footer() {
   return (
     <footer
-      id="rajdhani"
-      className="h-16 w-screen bg-gray-300 flex flex-col border-t border-black justify-center items-center"
+      // id="goldenrod"
+      className="h-16 w-screen bg-gray-200 flex flex-col border-t border-black justify-center items-center"
     >
-      <span className="text-black font-bold">Designed By A Goose</span>
+      <span className=" font-bold text-black" id="rajdhani">
+        Designed By A Goose
+      </span>
     </footer>
   )
 }

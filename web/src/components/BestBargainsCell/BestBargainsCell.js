@@ -31,7 +31,10 @@ export const Success = ({ cards }) => {
       {bestBargainsArray.map((card) => {
         return (
           <Link key={card.id} to={routes.displayCard({ id: card.id })}>
-            <li className="flex w-full justify-between mt-2 font-medium">
+            <li
+              id="text-gray"
+              className="flex w-full justify-between mt-2 font-medium"
+            >
               <span className="w-10/12 mr-6">{card.name}</span>
               <span className="w-1/12">
                 £{card.startingFromPrice.toFixed(2)}

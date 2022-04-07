@@ -11,7 +11,7 @@ const ADD_CARD_TO_BASKET = gql`
     createOrderItem(input: $input) {
       id
       buyerId
-      itemForSaleId
+
       orderItemStatus
     }
   }
@@ -26,9 +26,9 @@ const READD_CARD_TO_BASKET = gql`
 `
 
 export function AddToBasketButton({ item }) {
-  const { isAuthenticated, currentUser } = useAuth()
+  const { currentUser } = useAuth()
   console.log(item)
-  const [create, { loading, error }] = useMutation(ADD_CARD_TO_BASKET, {
+  const [create] = useMutation(ADD_CARD_TO_BASKET, {
     onCompleted: () => {
       toast.success('Card added to basket')
     },
