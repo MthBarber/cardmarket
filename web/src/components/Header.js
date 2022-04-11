@@ -2,9 +2,10 @@ import { useAuth } from '@redwoodjs/auth'
 import React from 'react'
 import { Link, routes } from '@redwoodjs/router'
 import BasketIconCell from 'src/components/BasketIconCell/BasketIconCell'
+import { MyAccount } from 'src/components/MyAccount'
 
 export function Header() {
-  const { isAuthenticated, currentUser, logOut } = useAuth()
+  const { isAuthenticated, currentUser } = useAuth()
   return (
     <nav className=" bg-emerald-600 h-16 text-white flex justify-center items-center font-sans border-b-2 border-black">
       <h1
@@ -26,14 +27,14 @@ export function Header() {
         <Link to={routes.itemsForSale()}>
           <button
             id="jost"
-            className="w-32 h-8 flex justify-around items-center text-black bg-white mx-8 border-2 border-gray-600 rounded-md"
+            className="w-32 h-8 flex justify-around items-center text-black bg-white mx-20 border-2 border-gray-600 rounded-md"
           >
             Your Listed Items
           </button>
         </Link>
       </div>
       <Link to={routes.basket()}>
-        <div id="jost" className="mx-8 ">
+        <div id="jost" className="mx-12 ">
           <button className="w-20 h-8 flex justify-around items-center text-black bg-white mx-8 border-2 border-gray-600 rounded-md">
             Basket{' '}
             {isAuthenticated ? (
@@ -44,7 +45,10 @@ export function Header() {
           </button>
         </div>
       </Link>
-      {isAuthenticated ? (
+      <div className="mr-8">
+        <MyAccount />
+      </div>
+      {/* {isAuthenticated ? (
         <div className="mr-8">
           <span id="rajdhani-400">Logged in as {currentUser.username}</span>{' '}
           <button
@@ -61,7 +65,7 @@ export function Header() {
             Login{' '}
           </button>
         </Link>
-      )}
+      )} */}
     </nav>
   )
 }
