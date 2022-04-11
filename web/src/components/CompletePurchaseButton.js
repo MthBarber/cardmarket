@@ -1,6 +1,7 @@
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/dist/toast'
 import { ItemsInBasketQuery } from 'src/components/BasketItemsCell/BasketItemsCell'
+import { navigate, routes } from '@redwoodjs/router'
 
 const CHANGE_TO_COMPLETE = gql`
   mutation updateOrderItem($id: Int!, $input: UpdateOrderItemInput!) {
@@ -36,6 +37,7 @@ export function CompletePurchaseButton({ completeBasketItems }) {
       }
     }
     toast.success('Purchase complete, thanks!')
+    navigate(routes.orderConfirmation())
   }
   return (
     <button
