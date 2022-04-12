@@ -10,11 +10,26 @@ const CHANGE_TO_COMPLETE = gql`
     }
   }
 `
+//Mutation for creating completedOrder
+const COMPLETE_ORDER = gql`
+  mutation createCompletedOrder($input: CreateCompletedOrderInput!) {
+    createCompletedOrder(input: $input) {
+      id
+    }
+  }
+`
 
 export function CompletePurchaseButton({ completeBasketItems }) {
   const [update] = useMutation(CHANGE_TO_COMPLETE, {
     onCompleted: () => {},
     refetchQueries: [ItemsInBasketQuery],
+  })
+
+  const [complete] = useMutation(COMPLETE_ORDER, {
+    onCompleted: (data) => {
+      console.log(data)
+      navigate(routes.orderConfirmation())
+    },
   })
 
   const onSubmit = (cardId, updateStatus) => {
@@ -23,6 +38,16 @@ export function CompletePurchaseButton({ completeBasketItems }) {
         id: cardId,
         input: {
           orderItemStatus: updateStatus,
+        },
+      },
+    })
+    complete({
+      variables: {
+        input: {
+          userId: completeBasketItems[0].buyerId,
+          orderItemIds: completeBasketItems
+            .filter((basketItem) => basketItem.orderItemStatus === 'InBasket')
+            .map((basketItem) => basketItem.id),
         },
       },
     })
@@ -37,7 +62,6 @@ export function CompletePurchaseButton({ completeBasketItems }) {
       }
     }
     toast.success('Purchase complete, thanks!')
-    navigate(routes.orderConfirmation())
   }
   return (
     <button

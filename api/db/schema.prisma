@@ -12,18 +12,19 @@ generator client {
 // to create migrations for them and apply to your dev DB.
 // TODO: Please remove the following example:
 model User {
-  id                  Int           @id @default(autoincrement())
-  email               String        @unique
-  username            String        @unique
+  id                  Int              @id @default(autoincrement())
+  email               String           @unique
+  username            String           @unique
   name                String?
   hashedPassword      String
   salt                String
   resetToken          String?
   resetTokenExpiresAt DateTime?
   itemsForSale        ItemForSale[]
-  location            String        @default("UK")
-  roles               String        @default("moderator")
+  location            String           @default("UK")
+  roles               String           @default("moderator")
   orderItems          OrderItem[]
+  completedOrders     CompletedOrder[]
 }
 
 model Card {
@@ -50,16 +51,25 @@ model ItemForSale {
   user       User        @relation(fields: [userId], references: [id])
   userId     Int
   orderItems OrderItem[]
-  // orderItem   OrderItem @relation(fields: [orderItemId], references: [id])
-  // orderItemId Int
+
+
 }
 
 model OrderItem {
-  id              Int         @id @default(autoincrement())
-  user            User        @relation(fields: [buyerId], references: [id])
-  buyerId         Int
-  itemForSale     ItemForSale @relation(fields: [itemForSaleId], references: [id])
-  itemForSaleId   Int
-  // itemsForSale    ItemForSale[]
-  orderItemStatus String
+  id               Int             @id @default(autoincrement())
+  user             User            @relation(fields: [buyerId], references: [id])
+  buyerId          Int
+  itemForSale      ItemForSale     @relation(fields: [itemForSaleId], references: [id])
+  itemForSaleId    Int
+  orderItemStatus  String
+  completedOrder   CompletedOrder? @relation(fields: [completedOrderId], references: [id])
+  completedOrderId Int?
+
+}
+
+model CompletedOrder {
+  id         Int         @id @default(autoincrement())
+  user       User        @relation(fields: [userId], references: [id])
+  userId     Int
+  orderItems OrderItem[]
 }

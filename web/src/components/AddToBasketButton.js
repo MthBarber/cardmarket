@@ -41,6 +41,7 @@ export function AddToBasketButton({ item }) {
     },
     refetchQueries: [ListedSellingItemsQuery, BasketIconUpdate],
   })
+
   //add conditional if row already exists for item to prevent duplication
   const onSubmit = () => {
     if (item.orderItems.length === 0) {
