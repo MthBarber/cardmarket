@@ -27,8 +27,10 @@ export function CompletePurchaseButton({ completeBasketItems }) {
 
   const [complete] = useMutation(COMPLETE_ORDER, {
     onCompleted: (data) => {
-      console.log(data)
-      navigate(routes.orderConfirmation())
+      // console.log(data)
+      let { id: orderId } = data.createCompletedOrder
+      console.log('second console log', orderId)
+      navigate(routes.orderConfirmation({ id: orderId }))
     },
   })
 
@@ -58,7 +60,7 @@ export function CompletePurchaseButton({ completeBasketItems }) {
       if (completeBasketItems[i].orderItemStatus == 'InBasket') {
         onSubmit(completeBasketItems[i].id, 'PurchaseComplete')
       } else {
-        console.log('Skip here for ', completeBasketItems[i])
+        // console.log('Skip here for ', completeBasketItems[i])
       }
     }
     toast.success('Purchase complete, thanks!')
