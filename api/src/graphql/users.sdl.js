@@ -10,11 +10,13 @@ export const schema = gql`
     resetTokenExpiresAt: DateTime
     itemsForSale: [ItemForSale]!
     location: String!
+    completedOrders: [CompletedOrder]!
   }
 
   type Query {
     users: [User!]! @skipAuth
     # user(userId: Int!): [itemForSale!] @skipAuth
+    user(id: Int!): [CompletedOrder]! @skipAuth
   }
 
   input CreateUserInput {

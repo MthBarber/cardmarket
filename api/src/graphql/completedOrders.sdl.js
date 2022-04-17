@@ -9,6 +9,7 @@ export const schema = gql`
   type Query {
     completedOrders: [CompletedOrder!]! @requireAuth
     completedOrder(id: Int!): CompletedOrder @requireAuth
+    completedOrderUser(userId: Int!): [CompletedOrder!]! @skipAuth
   }
 
   input CreateCompletedOrderInput {

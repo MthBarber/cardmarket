@@ -4,6 +4,12 @@ export const completedOrders = () => {
   return db.completedOrder.findMany()
 }
 
+export const completedOrderUser = ({ userId }) => {
+  return db.completedOrder.findMany({
+    where: { userId },
+  })
+}
+
 export const completedOrder = ({ id }) => {
   return db.completedOrder.findUnique({
     where: { id },
