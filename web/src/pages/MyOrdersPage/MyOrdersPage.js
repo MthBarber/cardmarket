@@ -1,4 +1,3 @@
-import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
 import { Header } from 'src/components/Header'
 import { Footer } from 'src/components/Footer'
@@ -11,7 +10,7 @@ const MyOrdersPage = () => {
       <Header />
       <div className="flex flex-col justify-center items-center">
         <h1 id="rajdhani" className="text-xl mt-4">
-          MyOrdersPage
+          Order History
         </h1>
         <OrderHistoryCell userId={1} />
       </div>

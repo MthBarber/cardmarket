@@ -37,21 +37,29 @@ export const Success = ({ displayCompletedOrder }) => {
     total += item.itemForSale.price
   })
   return (
-    <section className="h-full w-3/4">
+    <section className="h-full w-3/4 flex items-center mt-12">
       {currentUser.id === displayCompletedOrder.userId ? (
         <div className="h-full w-full flex flex-col items-center">
-          <h4 id="rajdhani" className="mb-8">
+          <h2 id="rajdhani" className="mb-8 text-xl">
             Your Order Number: #{displayCompletedOrder.id}
-          </h4>
+          </h2>
           <div
             id="jost"
             className="h-3/4 w-3/4 flex-col border border-gray-600 flex"
           >
             <ul className="w-full flex justify-around border-b border-gray-600">
-              <li className="w-1/4 text-center">Item Name</li>
-              <li className="w-1/4 text-center">Seller</li>
-              <li className="w-1/4 text-center">Quantity</li>
-              <li className="w-1/4 text-center">Price</li>
+              <li id="rajdhani" className="w-1/4 text-center">
+                Item Name
+              </li>
+              <li id="rajdhani" className="w-1/4 text-center">
+                Seller
+              </li>
+              <li id="rajdhani" className="w-1/4 text-center">
+                Quantity
+              </li>
+              <li id="rajdhani" className="w-1/4 text-center">
+                Price
+              </li>
             </ul>
             <section className="w-full">
               {displayCompletedOrder.orderItems.map((item) => {

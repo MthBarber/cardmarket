@@ -48,11 +48,11 @@ export const Success = ({ orderHistory }) => {
             key={item.id}
             className="border border-gray-600 w-1/3 m-2"
           >
-            <li id="rajdhani" className="pl-4 w-full">
+            <li id="rajdhani" className="pl-4 w-full py-2">
               <span> Order Number: #{item.id}</span>
               <span className="ml-96 mt-4">
                 <Link to={routes.viewCompletedOrder({ id: item.id })}>
-                  <button className="ml-auto border w-24 border-green-500 bg-green-500 text-white">
+                  <button className="ml-auto border w-24 border-green-500 font-bold bg-green-500 text-white">
                     View Order
                   </button>
                 </Link>
