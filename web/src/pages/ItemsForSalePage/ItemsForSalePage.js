@@ -1,13 +1,13 @@
 import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
-import ItemForSaleForm from 'src/components/ItemForSale/ItemForSaleForm/ItemForSaleForm'
+
 import ItemForSalesCell from 'src/components/ItemForSale/ItemForSalesCell/ItemForSalesCell'
 import { Header } from 'src/components/Header'
 import { Footer } from 'src/components/Footer'
 import { useAuth } from '@redwoodjs/auth'
 
 const ItemsForSalePage = () => {
-  const { isAuthenticated, currentUser, logOut } = useAuth()
+  const { isAuthenticated, currentUser } = useAuth()
 
   return (
     <div className="flex flex-col items-center justify-start w-full h-full ">

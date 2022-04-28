@@ -8,6 +8,7 @@ const MyOrdersPage = () => {
     <section className="w-full h-full flex flex-col">
       <MetaTags title="My Orders" description="MyOrders page" />
       <Header />
+
       <div className="flex flex-col justify-center items-center">
         <h1 id="rajdhani" className="text-xl mt-4">
           Order History

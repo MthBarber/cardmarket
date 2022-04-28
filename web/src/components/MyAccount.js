@@ -28,22 +28,25 @@ export function MyAccount() {
               My Account
             </button>
             {/* Drop down menu here */}
-            <div className=" bg-gray-100 h-48 w-40 absolute mt-9 rounded-md border-2 border-white mr-4">
+            <div className=" bg-gray-300 h-48 w-40 absolute mt-9 rounded-md border border-black mr-4">
               {isAuthenticated ? (
                 <ul className="mr-8 h-full w-full flex flex-col justify-between items-center">
                   <Link to={routes.myOrders()}>
                     <li className="mt-4">
-                      <button className="border-2 border-gray-600 bg-white rounded-md px-1 mx-2 text-black">
+                      <button className="border-2 border-purple-600 bg-purple-600 rounded-md px-1 mx-2 text-white font-semibold hover:border-purple-900 hover:bg-purple-900">
                         My Orders
                       </button>
                     </li>
                   </Link>
                   <li className="flex flex-col items-center mb-4">
-                    <span className="text-black" id="rajdhani-400">
+                    <span
+                      className="text-white text-l font-bold"
+                      id="rajdhani-400"
+                    >
                       Logged in as {currentUser.username}
                     </span>{' '}
                     <button
-                      className="border-2 h-8 border-gray-600 m-2 w-20 rounded-md bg-white text-black md:shadow-md"
+                      className="border-2 h-8 border-red-600 m-2 w-20 rounded-md bg-red-600 text-white font-semibold md:shadow-md hover:border-red-800 hover:bg-red-800"
                       type="button"
                       onClick={logOut}
                     >

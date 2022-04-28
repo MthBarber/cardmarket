@@ -44,7 +44,7 @@ export const Success = ({ cards }) => {
                   {card.name}
                 </li>
                 <img
-                  className="h-56 w-40 mt-8"
+                  className="h-56 w-40 mt-8 md:hover:animate-pulse"
                   src={card.cardImage}
                   alt={card.name}
                 ></img>
