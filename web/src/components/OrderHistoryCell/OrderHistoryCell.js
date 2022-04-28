@@ -1,3 +1,4 @@
+import { Link, routes } from '@redwoodjs/router'
 export const QUERY = gql`
   # query FindOrderHistoryQuery($id: Int!) {
   #   orderHistory: user(id: $id) {
@@ -47,8 +48,15 @@ export const Success = ({ orderHistory }) => {
             key={item.id}
             className="border border-gray-600 w-1/3 m-2"
           >
-            <li id="rajdhani" className="pl-4">
-              Order Number: #{item.id}
+            <li id="rajdhani" className="pl-4 w-full">
+              <span> Order Number: #{item.id}</span>
+              <span className="ml-96 mt-4">
+                <Link to={routes.viewCompletedOrder({ id: item.id })}>
+                  <button className="ml-auto border w-24 border-green-500 bg-green-500 text-white">
+                    View Order
+                  </button>
+                </Link>
+              </span>
             </li>
             <li>
               {item.orderItems.map((item) => {

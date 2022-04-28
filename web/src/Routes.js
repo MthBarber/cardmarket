@@ -13,6 +13,7 @@ import CardsLayout from 'src/layouts/CardsLayout'
 const Routes = () => {
   return (
     <Router>
+      <Route path="/view-completed-order/{id}" page={ViewCompletedOrderPage} name="viewCompletedOrder" />
       <Route path="/order-confirmation/{id:Int}" page={OrderConfirmationPage} name="orderConfirmation" />
       <Route path="/my-orders" page={MyOrdersPage} name="myOrders" />
       <Route path="/basket" page={BasketPage} name="basket" />
