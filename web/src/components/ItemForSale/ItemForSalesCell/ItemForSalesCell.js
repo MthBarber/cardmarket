@@ -41,9 +41,9 @@ export const Success = ({ itemsForSaleUser }) => {
   // <ItemForSales {itemForSales} /> original code removed temp to map over itemforsales array
 
   const [filterState, setFilterState] = useState('no-filter')
-  function changeFilterState(value) {
-    // setFilterState(input)
-    console.log('clicked', value)
+  function changeFilterState() {
+    setFilterState(document.getElementById('filterState').value)
+    console.log('clicked', document.getElementById('filterState').value)
   }
   return (
     <div className="flex flex-col justify-center h-3/4 items-center my-8">
@@ -52,7 +52,7 @@ export const Success = ({ itemsForSaleUser }) => {
       </h1>
       <div className="w-3/4 flex mt-4 justify-end">
         <p className="mr-8">Filter:</p>
-        <select onChange={changeFilterState}>
+        <select id="filterState" onChange={changeFilterState}>
           <option value="sold">Sold</option>
           <option value="not-sold">Not Sold</option>
           <option value="no-filter">Combined</option>

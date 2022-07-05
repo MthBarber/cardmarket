@@ -7,16 +7,16 @@ import { MyAccount } from 'src/components/MyAccount'
 export function Header() {
   const { isAuthenticated, currentUser } = useAuth()
   return (
-    <nav className=" bg-emerald-600 h-16 text-white flex justify-center items-center font-sans border-b-2 border-black">
+    <nav className=" bg-emerald-600 h-16 text-white md:flex md:justify-center md:items-center font-sans border-b-2 border-black">
       <h1
         id="rajdhani"
-        className="ml-4 text-2xl tracking-wide font-medium uppercase"
+        className="ml-4 md:text-2xl tracking-wide font-medium uppercase"
       >
         <Link to={routes.home()}>MTG Marketplace</Link>
       </h1>
       <ul
         id="rajdhani"
-        className="flex ml-auto mr-32 gap-8 mt-auto mb-2 font-medium transition-shadow"
+        className="flex ml-auto mr-32 gap-8 mt-auto mb-2 text-sm md:font-medium transition-shadow"
       >
         <li>Cards</li>
         <li>Playmats</li>
