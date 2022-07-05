@@ -3,6 +3,7 @@ import React from 'react'
 import { Link, routes } from '@redwoodjs/router'
 import BasketIconCell from 'src/components/BasketIconCell/BasketIconCell'
 import { MyAccount } from 'src/components/MyAccount'
+import { SidebarHeader } from 'src/components/SidebarHeader/SidebarHeader'
 
 export function Header() {
   const { isAuthenticated, currentUser } = useAuth()
@@ -14,6 +15,7 @@ export function Header() {
       >
         <Link to={routes.home()}>MTG Marketplace</Link>
       </h1>
+      <SidebarHeader />
       <ul
         id="rajdhani"
         className="flex ml-auto mr-32 gap-8 mt-auto mb-2 text-sm md:font-medium transition-shadow"
