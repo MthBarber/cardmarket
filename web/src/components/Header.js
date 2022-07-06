@@ -15,7 +15,9 @@ export function Header() {
       >
         <Link to={routes.home()}>MTG Marketplace</Link>
       </h1>
-      <SidebarHeader />
+      <div className="">
+        <SidebarHeader />
+      </div>
       <ul
         id="rajdhani"
         className="flex ml-auto mr-32 gap-8 mt-auto mb-2 text-sm md:font-medium transition-shadow"
