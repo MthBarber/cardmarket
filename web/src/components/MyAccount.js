@@ -13,7 +13,7 @@ export function MyAccount() {
         isOpen == false ? (
           <button
             id="jost"
-            className="border border-black bg-white rounded-md px-1 mx-2 text-black"
+            className="border  lg:w-24 lg:h-6 lg:text-sm border-black bg-white rounded-md px-2 mx-2 text-black"
             onClick={Toggle}
           >
             My Account

@@ -12,20 +12,23 @@ const HomePage = () => {
   // .then((data) => console.log(data))
   // }
   return (
-    <div className="h-screen w-screen flex flex-col justify-between items-center bg-gray-100">
+    <div className="h-full w-screen flex flex-col justify-between items-center bg-gray-100">
       <MetaTags title="Home" description="Home page" />
       <div className="w-full">
         <Header />
       </div>
-      <section className="w-10/12 h-1/2 flex flex-col items-center justify-start text-black bg-white mx-auto">
-        <h2 id="rajdhani" className="text-2xl text-emerald-600 font-bold my-6">
+      <section className="sm:w-10/12 flex flex-col  sm:items-center sm:justify-start text-black bg-white sm:mx-auto">
+        <h2
+          id="rajdhani"
+          className="sm:text-2xl text-emerald-600 font-bold my-6"
+        >
           Current Best Sellers!
         </h2>
-        <div className="h-60 w-4/5 flex items-center justify-center mt-16">
+        <div className="h-60 sm:h-1/2 w-5/6 flex items-center justify-center 2xl:mt-16 2xl:pb-12 sm:mb-8">
           <BestSellersCell />
         </div>
       </section>
-      <div className="flex w-10/12 h-80 justify-center">
+      <div className="flex w-10/12 h-80 justify-center mt-0 sm:mt-4 mb-8">
         <section className="w-2/5 h-full flex flex-col items-center justify-center text-black bg-white">
           <h3 id="rajdhani" className="font-bold text-xl text-emerald-600">
             New Releases!

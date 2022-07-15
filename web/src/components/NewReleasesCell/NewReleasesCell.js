@@ -35,7 +35,7 @@ export const Success = ({ cards }) => {
           <Link key={card.id} to={routes.displayCard({ id: card.id })}>
             <li
               id="text-blue"
-              className="flex text-black mt-2 justify-between font-medium"
+              className="flex text-black mt-2 justify-between 2xl:font-medium"
               key={card.id}
             >
               <span id="text-gray" className="w-10/12 mr-6">

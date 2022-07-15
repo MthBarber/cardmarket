@@ -2,7 +2,7 @@ import { Link, routes } from '@redwoodjs/router'
 import { useAuth } from '@redwoodjs/auth'
 import { MyAccount } from 'src/components/MyAccount'
 import BasketIconCell from 'src/components/BasketIconCell/BasketIconCell'
-// import hamburgerIcon from '../assets/hamburgerIcon'
+import hamburgerIcon from 'src/assets/hamburgerIcon.png'
 
 const SidebarHeader = () => {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -15,11 +15,10 @@ const SidebarHeader = () => {
     <div>
       {isOpen === false ? (
         <button onClick={Toggle} className="border border-gray-600">
-          {/* <img src={hamburgerIcon}></img> */}
-          Hamburger menu
+          <img className="h-6 w-6" src={hamburgerIcon} alt="hamburgerIcon" />
         </button>
       ) : (
-        <menu className="flex flex-col justify-around items-center w-60 h-60 bg-red-600 mt-52">
+        <menu className="flex flex-col justify-around items-center w-60 h-60 bg-red-600 mt-52 z-10">
           <button onClick={Toggle} className="flex justify-end">
             X
           </button>

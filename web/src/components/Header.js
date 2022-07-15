@@ -8,38 +8,38 @@ import { SidebarHeader } from 'src/components/SidebarHeader/SidebarHeader'
 export function Header() {
   const { isAuthenticated, currentUser } = useAuth()
   return (
-    <nav className=" bg-emerald-600 h-16 text-white md:flex md:justify-center md:items-center font-sans border-b-2 border-black">
+    <nav className=" bg-emerald-600 h-16 text-white flex md:justify-center justify-start items-center font-sans border-b-2 border-black">
+      <div className="ml-4 md:hidden  my-auto">
+        <SidebarHeader />
+      </div>
       <h1
         id="rajdhani"
-        className="ml-4 md:text-2xl tracking-wide font-medium uppercase"
+        className="ml-4 mr-auto md:text-2xl text-sm tracking-wide font-medium uppercase"
       >
         <Link to={routes.home()}>MTG Marketplace</Link>
       </h1>
-      <div className="">
-        <SidebarHeader />
-      </div>
       <ul
         id="rajdhani"
-        className="flex ml-auto mr-32 gap-8 mt-auto mb-2 text-sm md:font-medium transition-shadow"
+        className="lg:flex hidden mx-auto md:ml-auto md:mr-auto md:justify-self-center md:gap-8 md:mt-auto md:mb-2 md:text-sm md:font-medium md:transition-shadow"
       >
         <li>Cards</li>
         <li>Playmats</li>
         <li>Decks</li>
         <li>Deckboxes</li>
       </ul>
-      <div className="ml-4">
+      <div className="md:ml-4 hidden">
         <Link to={routes.itemsForSale()}>
           <button
             id="jost"
-            className="w-32 h-8 flex justify-around items-center text-black bg-white mx-20 border-2 border-gray-600 rounded-md"
+            className="w-32 md:block h-8 flex justify-around items-center text-black bg-white mx-20 border-2 border-gray-600 rounded-md"
           >
             Your Listed Items
           </button>
         </Link>
       </div>
       <Link to={routes.basket()}>
-        <div id="jost" className="mx-12 ">
-          <button className="w-20 h-8 flex justify-around items-center text-black bg-white mx-8 border-2 border-gray-600 rounded-md">
+        <div id="jost" className="mx-12 hidden md:block">
+          <button className="px-2 lg:w-14 lg:h-6 lg:text-sm 2xl:w-20 2xl:h-8 flex justify-around items-center text-black bg-white mx-8 border border-gray-600 rounded-md">
             Basket{' '}
             {isAuthenticated ? (
               <BasketIconCell buyerId={currentUser.id} />
@@ -49,7 +49,7 @@ export function Header() {
           </button>
         </div>
       </Link>
-      <div className="mr-8">
+      <div className="mr-8 hidden md:block">
         <MyAccount />
       </div>
       {/* {isAuthenticated ? (
