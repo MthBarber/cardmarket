@@ -31,15 +31,15 @@ export const Success = ({ displayCard }) => {
       >
         {displayCard.name}
       </div>
-      <div className=" h-1/2 w-10/12 flex mt-4 justify-center">
-        <div className="flex flex-col ml-auto mr-48 justify-center items-center">
+      <div className=" h-1/2 w-10/12 flex mt-4 justify-center text-sm md:text-base">
+        <div className="flex flex-col ml-auto mr-8 md:mr-24 2xl:mr-48 justify-center items-center">
           <img
-            className="h-96 w-72"
+            className=" md:h-72 md:w-56 2xl:h-96 2xl:w-72"
             src={displayCard.cardImage}
             alt={displayCard.name}
           ></img>
         </div>
-        <div className="mt-16 mb-16 border mr-auto border-black p-4">
+        <div className="mt-16 mb-16 border mr-auto md:text-sm border-black p-4">
           <div className="font-semibold">
             Name: <span id="jost">{displayCard.name}</span>
           </div>

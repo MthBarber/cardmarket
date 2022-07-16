@@ -68,17 +68,16 @@ export function AddToBasketButton({ item }) {
 
   return (
     <>
-      {/* {console.log(item.orderItems)} */}
       <Toaster />
       {item.orderItems.length > 0 &&
       item.orderItems[0].orderItemStatus == 'InBasket' ? (
-        <button className="bg-red-500 border-2 px-2 border-red-500">
+        <button className="bg-red-500 border-2 md:px-2 border-red-500">
           In Basket
         </button>
       ) : (
         <button
           onClick={onSubmit}
-          className="bg-green-500 border-2 px-2 border-green-500"
+          className="bg-green-500 border-2 md:px-2 text-xs my-1 md:my-0 lg:text-base border-green-500"
         >
           Add To Basket
         </button>

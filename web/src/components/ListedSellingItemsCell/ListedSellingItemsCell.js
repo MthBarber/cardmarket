@@ -40,7 +40,10 @@ export const Success = ({ listedSellingItems }) => {
   sortedSellingItemsArray.sort((a, b) => a.price - b.price)
 
   return (
-    <div id="jost" className="flex flex-col justify-start bg-white">
+    <div
+      id="jost"
+      className="flex flex-col justify-start text-sm md:text-base  bg-white"
+    >
       {sortedSellingItemsArray.map((item) => {
         return (
           <div

@@ -11,16 +11,16 @@ const DisplayCardPage = ({ id }) => {
   //   changeOrderPopupState((prevState) => !prevState)
   // }
   return (
-    <div className="h-full w-screen pb-16 bg-gray-100">
+    <div className="h-full w-screen bg-gray-100">
       <Header />
       <MetaTags title="DisplayCard" description="DisplayCard page" />
-      <div className="flex justify-center w-2/3 mx-auto mt-6 mb-6 border bg-white">
+      <div className="flex md:flex-row justify-center w-2/3 mx-auto mt-6 mb-6 border bg-white">
         <DisplayCardCell id={id} />
       </div>
       <div className="mx-auto mb-36 border-2 border-black flex-grow h-2/3 w-2/3 flex flex-col justify-between bg-white">
         <div
           id="text-gray"
-          className="h-6 w-full flex items-start justify-start bg-white"
+          className="h-6 w-full flex items-start justify-start text-sm md:text-base bg-white"
         >
           <div className="w-1/5 h-6 border-r border-b  border-black font-semibold text-center">
             Seller Name
@@ -45,7 +45,7 @@ const DisplayCardPage = ({ id }) => {
           <ListedSellingItemsCell cardId={id} />
         </div>
       </div>
-      <div className="fixed inset-x-0 bottom-0 ">
+      <div className="relative inset-x-0 bottom-0 ">
         <Footer />
       </div>
     </div>
