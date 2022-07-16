@@ -29,13 +29,13 @@ export const Success = ({ cards }) => {
   }
 
   return (
-    <ul className="w-full flex flex-col border-x px-16">
+    <ul className="w-full flex flex-col h-92 justify-between border-x px-16">
       {newReleasesArray.map((card) => {
         return (
           <Link key={card.id} to={routes.displayCard({ id: card.id })}>
             <li
               id="text-blue"
-              className="flex text-black mt-2 justify-between 2xl:font-medium"
+              className="flex h-1/6 text-black mt-2 items-center 2xl:font-medium"
               key={card.id}
             >
               <span id="text-gray" className="w-10/12 mr-6">

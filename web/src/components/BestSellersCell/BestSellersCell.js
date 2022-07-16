@@ -26,7 +26,7 @@ export const Success = ({ cards }) => {
   }
 
   return (
-    <div className="h-auto grid md:grid-cols-3 lg:flex lg:flex-row lg:items-center lg:h-64 2xl:h-72 justify-around">
+    <div className="h-auto grid sm:grid-cols-2 md:grid-cols-3 lg:flex lg:flex-row lg:items-center lg:h-64 2xl:h-72 justify-around">
       {bestSellersArray.map((card) => {
         return (
           <div

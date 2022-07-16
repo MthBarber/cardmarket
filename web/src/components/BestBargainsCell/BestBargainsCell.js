@@ -27,13 +27,13 @@ export const Success = ({ cards }) => {
   }
   console.log(bestBargainsArray)
   return (
-    <ul className="text-black w-full flex flex-col border-x px-16">
+    <ul className="text-black w-full h-92 flex flex-col justify-between border-x px-16">
       {bestBargainsArray.map((card) => {
         return (
           <Link key={card.id} to={routes.displayCard({ id: card.id })}>
             <li
               id="text-gray"
-              className="flex w-full justify-between mt-2 2xl:font-medium"
+              className="flex w-full h-1/6 justify-between mt-2 2xl:font-medium"
             >
               <span className="w-10/12 mr-6">{card.name}</span>
               <span className="w-1/12">

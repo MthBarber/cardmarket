@@ -8,7 +8,7 @@ import { SidebarHeader } from 'src/components/SidebarHeader/SidebarHeader'
 export function Header() {
   const { isAuthenticated, currentUser } = useAuth()
   return (
-    <nav className=" bg-emerald-600 h-16 text-white flex md:justify-center justify-start items-center font-sans border-b-2 border-black">
+    <nav className="bg-emerald-600 h-16 text-white flex md:justify-center justify-start items-center font-sans border-b-2 border-black">
       <div className="ml-4 md:hidden  my-auto">
         <SidebarHeader />
       </div>
