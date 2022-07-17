@@ -23,16 +23,16 @@ const BasketPage = () => {
           {isAuthenticated ? (
             <div className="h-full">
               <div className="flex justify-around mt-2 mb-2">
-                <span className="text-lg w-1/4 text-center font-medium">
+                <span className="text-sm md:text-lg w-1/4 text-center font-medium">
                   Item
                 </span>
-                <span className="text-lg w-1/4 text-center font-medium">
+                <span className="text-sm md:text-lg w-1/4 text-center font-medium">
                   Condition
                 </span>
-                <span className="text-lg w-1/4 text-center font-medium">
+                <span className="text-sm md:text-lg w-1/4 text-center font-medium">
                   Quantity
                 </span>
-                <span className="text-lg w-1/4 text-center mr-8 font-medium">
+                <span className="text-sm md:text-lg w-1/4 text-center mr-8 font-medium">
                   Price
                 </span>
               </div>
