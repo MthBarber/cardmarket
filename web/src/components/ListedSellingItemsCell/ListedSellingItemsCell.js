@@ -42,7 +42,7 @@ export const Success = ({ listedSellingItems }) => {
   return (
     <div
       id="jost"
-      className="flex flex-col justify-start text-sm md:text-base  bg-white"
+      className="flex flex-col justify-start text-xs sm:text-sm md:text-base  bg-white"
     >
       {sortedSellingItemsArray.map((item) => {
         return (

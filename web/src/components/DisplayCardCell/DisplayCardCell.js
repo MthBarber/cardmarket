@@ -27,12 +27,12 @@ export const Success = ({ displayCard }) => {
     <div className="flex flex-col items-center h-1/2 w-screen mb-8">
       <div
         id="rajdhani"
-        className="my-4 text-2xl text-emerald-600 underline font-bold"
+        className="my-4 text-2xl text-center text-emerald-600 underline font-bold"
       >
         {displayCard.name}
       </div>
       <div className=" h-1/2 w-10/12 flex flex-col md:flex-row mt-4 justify-center text-sm md:text-base">
-        <div className="flex flex-col ml-auto mr-8 md:mr-24 2xl:mr-48 justify-center items-center">
+        <div className="flex flex-col mx-auto  md:mr-24 2xl:mr-48 justify-center items-center">
           <img
             className="md:h-72 md:w-56 2xl:h-96 2xl:w-72"
             src={displayCard.cardImage}

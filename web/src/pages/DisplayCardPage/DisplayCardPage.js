@@ -20,24 +20,24 @@ const DisplayCardPage = ({ id }) => {
       <div className="mx-auto mb-36 border-2 border-black flex-grow h-2/3 w-2/3 flex flex-col justify-between bg-white">
         <div
           id="text-gray"
-          className="h-6 w-full flex items-start justify-start text-sm md:text-base bg-white"
+          className=" h-auto md:h-6 w-full flex items-start justify-start text-xs sm:text-sm md:text-base bg-white"
         >
-          <div className="w-1/5 h-6 border-r border-b  border-black font-semibold text-center">
+          <div className="w-1/5 h-10 md:h-6 border-r border-b pt-4 md:pt-0 border-black font-semibold text-center">
             Seller Name
           </div>
-          <div className="w-1/5 h-6 border-r border-b border-black font-semibold text-center">
+          <div className="w-1/5 h-10 md:h-6 border-r border-b  border-black font-semibold text-center">
             Seller Location
           </div>
-          <div className="w-1/5 h-6 border-r border-b border-black font-semibold text-center">
+          <div className="w-1/5 h-10 md:h-6 border-r border-b pt-4 md:pt-0 border-black font-semibold text-center">
             Condition
           </div>
-          {/* <div className="w-1/5 h-6 border-r border-b border-black font-semibold text-center">
+          {/* <div className="w-1/5 h-10 md:h-6 border-r border-b pt-4 md:pt-0 border-black font-semibold text-center">
             Quantity{' '}
           </div> */}
-          <div className="w-1/5 h-6 text-center border-b border-black border-r font-semibold">
+          <div className="w-1/5 h-10 md:h-6 text-center border-b pt-4 md:pt-0 border-black border-r font-semibold">
             Price
           </div>
-          <div className="w-1/5 h-6 border-b text-center border-black font-semibold">
+          <div className="w-1/5 h-10 md:h-6 border-b pt-4 md:pt-0 text-center border-black font-semibold">
             Availability
           </div>
         </div>
