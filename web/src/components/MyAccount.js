@@ -38,6 +38,13 @@ export function MyAccount() {
                       </button>
                     </li>
                   </Link>
+                  <Link to={routes.itemsForSale()}>
+                    <li className="mt-4">
+                      <button className="border-2 border-purple-600 bg-purple-600 rounded-md px-1 mx-2 text-white font-semibold hover:border-purple-900 hover:bg-purple-900">
+                        Listed Items
+                      </button>
+                    </li>
+                  </Link>
                   <li className="flex flex-col items-center mb-4">
                     <span
                       className="text-white text-l font-bold"
