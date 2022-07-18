@@ -62,13 +62,13 @@ export const Success = ({ itemsForSaleUser }) => {
         ? itemsForSaleUser.map((itemForSale) => (
             <ul
               key={itemForSale.id}
-              className="flex justify-center items-center w-3/4 h-16 mt-8 border-2"
+              className="flex justify-center items-center w-3/4 h-auto sm:h-auto sm:py-1 md:h-16 mt-8 text-xs lg:text-small 2xl:text-base border-2"
               id="jost"
             >
               <li className="w-1/6 text-center">
                 Card Ref: {itemForSale.cardRef}
               </li>
-              <li className="w-1/6 text-center">
+              <li className="w-2/6 text-center">
                 Card Name: {itemForSale.card.name}
               </li>
               <li className="w-1/6 text-center">
