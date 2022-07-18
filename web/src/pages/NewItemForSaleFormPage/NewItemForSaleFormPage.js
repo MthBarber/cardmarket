@@ -20,11 +20,11 @@ const NewItemForSaleFormPage = () => {
       <h1 id="rajdhani" className="my-4">
         Add New Item To Your Selling List
       </h1>
-      <div className="w-1/3">
+      <div className="w-11/12 sm:w-1/2 lg:w-1/3 mb-2">
         <NewItemForSale currentUser={currentUser.id} />
         {/* <ItemForSaleForm /> */}
       </div>
-      <div className="absolute inset-x-0 bottom-0">
+      <div className="relative inset-x-0 bottom-0">
         <Footer />
       </div>
     </div>
