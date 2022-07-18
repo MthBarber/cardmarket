@@ -62,7 +62,7 @@ export const Success = ({ listedSellingItems }) => {
             <span className="w-1/5 h-8 flex items-center justify-center text-center">
               £{item.price.toFixed(2)}
             </span>
-            <span className="w-1/5 h-8 flex items-center justify-center text-center">
+            <span className="w-1/5 h-8 flex items-center my-1 sm:my-0 justify-center text-center">
               <AddToBasketButton item={item} />
             </span>
           </div>

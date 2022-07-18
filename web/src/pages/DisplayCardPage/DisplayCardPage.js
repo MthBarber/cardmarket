@@ -17,12 +17,12 @@ const DisplayCardPage = ({ id }) => {
       <div className="flex md:flex-row justify-center w-2/3 mx-auto mt-6 mb-6 border bg-white">
         <DisplayCardCell id={id} />
       </div>
-      <div className="mx-auto mb-36 border-2 border-black flex-grow h-2/3 w-2/3 flex flex-col justify-between bg-white">
+      <div className="mx-auto mb-36 border-2 border-black flex-grow h-2/3 w-full sm:w-2/3 flex flex-col justify-between bg-white">
         <div
           id="text-gray"
           className=" h-auto md:h-6 w-full flex items-start justify-start text-xs sm:text-sm md:text-base bg-white"
         >
-          <div className="w-1/5 h-10 md:h-6 border-r border-b pt-4 md:pt-0 border-black font-semibold text-center">
+          <div className="w-1/5 h-10 md:h-6 border-r border-b sm:pt-4 md:pt-0 border-black font-semibold text-center">
             Seller Name
           </div>
           <div className="w-1/5 h-10 md:h-6 border-r border-b  border-black font-semibold text-center">

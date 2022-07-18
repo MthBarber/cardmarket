@@ -40,22 +40,22 @@ export const Success = ({ itemsInBasket }) => {
             }
             return (
               <span
-                className="w-full h-8 flex justify-around items-center border-b border-black"
+                className="w-full h-8 text-xs sm:text-sm md:text-lg flex justify-around items-center border-b border-black"
                 key={item.itemForSale.id}
               >
-                <li className="h-8 w-1/4 text-center flex flex-col justify-center">
+                <li className="h-8 text-xs sm:text-sm md:text-lg w-1/4 text-center flex flex-col justify-center">
                   {item.itemForSale.card.name}
                 </li>
-                <li className="h-8 w-1/4 text-center flex flex-col justify-center">
+                <li className="h-8 text-xs sm:text-sm md:text-lg w-1/4 text-center flex flex-col justify-center">
                   {item.itemForSale.condition}
                 </li>
-                <li className="h-8 w-1/4 text-center flex flex-col justify-center">
+                <li className="h-8 text-xs sm:text-sm md:text-lg w-1/4 text-center flex flex-col justify-center">
                   1
                 </li>
-                <li className="h-8 w-1/4 text-center flex flex-col justify-center">
+                <li className="h-8 text-xs sm:text-sm md:text-lg w-1/4 text-center flex flex-col justify-center">
                   £{item.itemForSale.price.toFixed(2)}
                 </li>
-                <li className="h-8 text-center flex flex-col justify-center mr-2">
+                <li className="h-8 text-xs sm:text-sm md:text-lg text-center flex flex-col justify-center mr-2">
                   <RemoveFromBasketButton itemId={item.id} />
                 </li>
               </span>
@@ -66,11 +66,11 @@ export const Success = ({ itemsInBasket }) => {
         })}
       </ul>
       <div className="flex justify-end self-end ">
-        <span className=" w-48 mb-4  pr-16  flex justify-center text-center">
+        <span className=" w-48 mb-4 pl-16 sm:pr-4 lg:pr-8 2xl:pr-16 text-xs sm:text-sm md:text-lg flex justify-center text-center">
           Total: £{totalCost.toFixed(2)}
         </span>
       </div>
-      <div className="w-full flex justify-end mt-2">
+      <div className="w-full flex justify-end md:mt-2">
         <CompletePurchaseButton completeBasketItems={itemsInBasket} />
       </div>
     </div>

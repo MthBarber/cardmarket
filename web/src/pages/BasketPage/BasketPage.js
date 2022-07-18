@@ -12,27 +12,27 @@ const BasketPage = () => {
       <div className="w-full bg-white">
         <Header />
       </div>
-      <div className="w-3/4 h-full flex flex-col justify-start items-center bg-white mt-4 mb-20">
+      <div className="w-full sm:w-3/4 h-full flex flex-col justify-start items-center bg-white mt-4 mb-20">
         <h1 id="rajdhani" className="mb-6 mt-8 text-2xl">
           Basket Items
         </h1>
         <div
           id="jost"
-          className="border-2 border-black w-3/4 h-2/3  flex flex-col justify-start"
+          className="border-2 border-black w-full  sm:w-3/4 h-2/3 flex flex-col justify-start"
         >
           {isAuthenticated ? (
-            <div className="h-full">
+            <div className="h-full w-full">
               <div className="flex justify-around mt-2 mb-2">
-                <span className="text-sm md:text-lg w-1/4 text-center font-medium">
+                <span className="text-xs sm:text-sm md:text-lg w-1/4 text-center font-medium">
                   Item
                 </span>
-                <span className="text-sm md:text-lg w-1/4 text-center font-medium">
+                <span className="text-xs sm:text-sm md:text-lg w-1/4 text-center font-medium">
                   Condition
                 </span>
-                <span className="text-sm md:text-lg w-1/4 text-center font-medium">
+                <span className="text-xs sm:text-sm md:text-lg w-1/4 text-center font-medium">
                   Quantity
                 </span>
-                <span className="text-sm md:text-lg w-1/4 text-center mr-8 font-medium">
+                <span className="text-xs sm:text-sm md:text-lg w-1/4 text-center mr-8 font-medium">
                   Price
                 </span>
               </div>

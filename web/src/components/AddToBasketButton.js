@@ -77,7 +77,7 @@ export function AddToBasketButton({ item }) {
       ) : (
         <button
           onClick={onSubmit}
-          className="bg-green-500 border-2 md:px-2 text-xs my-1 md:my-0 lg:text-base border-green-500"
+          className="bg-green-500 border-2 md:px-2 mx-0 text-xs my-1 md:my-0 lg:text-base border-green-500"
         >
           Add To Basket
         </button>

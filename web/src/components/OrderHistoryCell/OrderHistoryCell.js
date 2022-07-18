@@ -46,13 +46,13 @@ export const Success = ({ orderHistory }) => {
           <ul
             id="jost"
             key={item.id}
-            className="border border-gray-600 w-1/3 m-2"
+            className="border border-gray-600 w-11/12 md:w-3/4 m-2"
           >
-            <li id="rajdhani" className="pl-4 w-full py-2">
+            <li id="rajdhani" className="pl-4 flex justify-between w-full py-2">
               <span> Order Number: #{item.id}</span>
-              <span className="sm:ml-20 md:ml-32 lg:ml-40 2xl:ml-96 mt-4">
+              <span className="mr-4 ">
                 <Link to={routes.viewCompletedOrder({ id: item.id })}>
-                  <button className="2xl:ml-auto border w-24 border-green-500 font-bold bg-green-500 text-white">
+                  <button className="2xl:ml-auto border w-16 text-xs sm:text-base sm:w-24 border-green-500 font-bold bg-green-500 text-white">
                     View Order
                   </button>
                 </Link>
@@ -63,7 +63,7 @@ export const Success = ({ orderHistory }) => {
                 return (
                   <span
                     key={item.id}
-                    className="text-xs sm:text-base flex justify-around"
+                    className="text-xs sm:text-base py-2 sm:py-0 flex justify-around"
                   >
                     <li className="pl-4 w-1/3 ">
                       {item.itemForSale.card.name}

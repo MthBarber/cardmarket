@@ -68,7 +68,7 @@ export function CompletePurchaseButton({ completeBasketItems }) {
   return (
     <button
       onClick={CompletePurchase}
-      className="border-2 bg-green-500 border-green-500 flex justify-end px-2 text-white text-lg font-bold"
+      className="border-2 bg-green-500 border-green-500 flex justify-end px-2 text-white text-xs sm:text-sm md:text-lg font-bold"
     >
       Complete Purchase
     </button>
