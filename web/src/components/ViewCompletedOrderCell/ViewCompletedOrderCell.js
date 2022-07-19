@@ -37,7 +37,7 @@ export const Success = ({ displayCompletedOrder }) => {
     total += item.itemForSale.price
   })
   return (
-    <section className="h-full w-3/4 flex items-center mt-12">
+    <section className="h-full w-full flex items-center mt-12">
       {currentUser.id === displayCompletedOrder.userId ? (
         <div className="h-full w-full flex flex-col items-center">
           <h2 id="rajdhani" className="mb-8 text-xl">
@@ -45,9 +45,9 @@ export const Success = ({ displayCompletedOrder }) => {
           </h2>
           <div
             id="jost"
-            className="h-3/4 w-3/4 flex-col border border-gray-600 flex"
+            className="h-3/4 w-11/12 sm:w-3/4 flex-col border border-gray-600 flex mb-4"
           >
-            <ul className="w-full flex justify-around border-b border-gray-600">
+            <ul className="w-full flex justify-around text-xs sm:text-base border-b border-gray-600">
               <li id="rajdhani" className="w-1/4 text-center">
                 Item Name
               </li>
@@ -64,23 +64,28 @@ export const Success = ({ displayCompletedOrder }) => {
             <section className="w-full">
               {displayCompletedOrder.orderItems.map((item) => {
                 return (
-                  <ul key={(keyNum += 1)} className=" w-full flex">
-                    <li className="w-1/4 text-center">
+                  <ul
+                    key={(keyNum += 1)}
+                    className="w-full flex text-xs sm:text-base my-2"
+                  >
+                    <li className="w-1/4 text-center overflow-hidden">
                       {item.itemForSale.card.name}
                     </li>
-                    <li className="w-1/4 text-center">
+                    <li className="w-1/4 text-center overflow-hidden">
                       {' '}
                       {item.itemForSale.user.username}{' '}
                     </li>
-                    <li className="w-1/4 text-center"> 1</li>
-                    <li className="w-1/4 pl-28">
+                    <li className="w-1/4 text-center overflow-hidden"> 1</li>
+                    <li className="w-1/4 pl-2 sm:pl-8 md:pl-12 2xl:pl-28">
                       £{item.itemForSale.price.toFixed(2)}
                     </li>
                   </ul>
                 )
               })}
             </section>
-            <div className="ml-auto mr-24">Total: £{total.toFixed(2)}</div>
+            <div className="text-xs sm:text-base ml-auto sm:pr-8 mr-2 md:mr-12 2xl:mr-24">
+              Total: £{total.toFixed(2)}
+            </div>
           </div>
         </div>
       ) : (

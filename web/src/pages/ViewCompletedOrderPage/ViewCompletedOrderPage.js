@@ -23,7 +23,7 @@ const ViewCompletedOrderPage = ({ id }) => {
       <section className="h-full flex justify-center items-center">
         <ViewCompletedOrderCell id={parseInt(id)} />
       </section>
-      <section className="absolute bottom-0">
+      <section className="relative bottom-0">
         <Footer />
       </section>
     </div>
