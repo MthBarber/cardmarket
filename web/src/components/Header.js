@@ -14,7 +14,7 @@ export function Header() {
       </div>
       <h1
         id="rajdhani"
-        className="ml-4 mr-auto sm:text-lg md:text-2xl text-sm tracking-wide font-medium uppercase"
+        className="ml-4 mr-auto text-2xl text-sm tracking-wide font-medium uppercase"
       >
         <Link to={routes.home()}>MTG Marketplace</Link>
       </h1>

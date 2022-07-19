@@ -51,7 +51,14 @@ const SidebarHeader = () => {
                 </button>
               </li>
             </Link>
-            <li className="flex flex-col items-center mb-4">
+            <Link to={routes.newItemForSaleForm()}>
+              <li className="mt-4">
+                <button className="border-2 w-28 border-purple-600 bg-purple-600 rounded-md px-1 mx-2 text-white font-semibold hover:border-purple-900 hover:bg-purple-900">
+                  Sell Cards
+                </button>
+              </li>
+            </Link>
+            <li className="flex flex-col items-center my-4">
               <span className="text-black text-l font-bold" id="rajdhani-400">
                 Logged in as {currentUser.username}
               </span>{' '}

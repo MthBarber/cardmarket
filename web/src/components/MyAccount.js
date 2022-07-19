@@ -28,7 +28,7 @@ export function MyAccount() {
               My Account
             </button>
             {/* Drop down menu here */}
-            <div className=" bg-white h-48 w-40 absolute mt-9 rounded-md border border-black mr-4">
+            <div className=" bg-white h-56 w-40 absolute mt-9 rounded-md border border-black mr-4">
               {isAuthenticated ? (
                 <ul className="mr-8 h-full w-full flex flex-col justify-between items-center">
                   <Link to={routes.myOrders()}>
@@ -45,7 +45,14 @@ export function MyAccount() {
                       </button>
                     </li>
                   </Link>
-                  <li className="flex flex-col items-center mb-4">
+                  <Link to={routes.newItemForSaleForm()}>
+                    <li className="mt-4">
+                      <button className="border-2 border-purple-600 bg-purple-600 rounded-md px-1 mx-2 text-white font-semibold hover:border-purple-900 hover:bg-purple-900">
+                        Sell Cards
+                      </button>
+                    </li>
+                  </Link>
+                  <li className="flex flex-col items-center my-4">
                     <span
                       className="text-black text-l font-bold"
                       id="rajdhani-400"
