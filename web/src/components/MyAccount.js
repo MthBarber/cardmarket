@@ -13,7 +13,7 @@ export function MyAccount() {
         isOpen == false ? (
           <button
             id="jost"
-            className="border  lg:w-24 lg:h-6 lg:text-sm border-black bg-white rounded-md px-2 mx-2 text-black"
+            className="border lg:w-24 lg:h-6 lg:text-sm border-black bg-white rounded-md px-2 mx-2 text-black"
             onClick={Toggle}
           >
             My Account
@@ -22,13 +22,13 @@ export function MyAccount() {
           <div className="flex flex-col items-center">
             <button
               id="jost"
-              className="border border-black bg-white rounded-md font-medium p-1 mx-2 text-black"
+              className="border lg:w-24 lg:h-6 lg:text-sm border-black bg-white rounded-md px-2 mx-2 text-black"
               onClick={Toggle}
             >
               My Account
             </button>
             {/* Drop down menu here */}
-            <div className=" bg-gray-300 h-48 w-40 absolute mt-9 rounded-md border border-black mr-4">
+            <div className=" bg-white h-48 w-40 absolute mt-9 rounded-md border border-black mr-4">
               {isAuthenticated ? (
                 <ul className="mr-8 h-full w-full flex flex-col justify-between items-center">
                   <Link to={routes.myOrders()}>
@@ -47,7 +47,7 @@ export function MyAccount() {
                   </Link>
                   <li className="flex flex-col items-center mb-4">
                     <span
-                      className="text-white text-l font-bold"
+                      className="text-black text-l font-bold"
                       id="rajdhani-400"
                     >
                       Logged in as {currentUser.username}
