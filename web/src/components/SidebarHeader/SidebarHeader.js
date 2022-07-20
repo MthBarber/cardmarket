@@ -58,18 +58,26 @@ const SidebarHeader = () => {
                 </button>
               </li>
             </Link>
-            <li className="flex flex-col items-center my-4">
-              <span className="text-black text-l font-bold" id="rajdhani-400">
-                Logged in as {currentUser.username}
-              </span>{' '}
-              <button
-                className="border-2 h-8 w-28 border-red-600 m-2 w-20 rounded-md bg-red-600 text-white font-semibold md:shadow-md hover:border-red-800 hover:bg-red-800"
-                type="button"
-                onClick={logOut}
-              >
-                Logout
-              </button>
-            </li>
+            {isAuthenticated ? (
+              <li className="flex flex-col items-center my-4">
+                <span className="text-black text-l font-bold" id="rajdhani-400">
+                  Logged in as {currentUser.username}
+                </span>
+                <button
+                  className="border-2 h-8 w-28 border-red-600 m-2 rounded-md bg-red-600 text-white font-semibold md:shadow-md hover:border-red-800 hover:bg-red-800"
+                  type="button"
+                  onClick={logOut}
+                >
+                  Logout
+                </button>
+              </li>
+            ) : (
+              <Link span id="rajdhani-400" to={routes.login()}>
+                <button className="border-2 h-8 w-28 border-emerald-600 m-2 rounded-md bg-emerald-600 text-white font-semibold md:shadow-md hover:bg-emerald-800 hover:border-emerald-800">
+                  Login{' '}
+                </button>
+              </Link>
+            )}
           </menu>
         </div>
       )}

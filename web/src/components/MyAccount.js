@@ -58,7 +58,7 @@ export function MyAccount() {
                       id="rajdhani-400"
                     >
                       Logged in as {currentUser.username}
-                    </span>{' '}
+                    </span>
                     <button
                       className="border-2 h-8 border-red-600 m-2 w-20 rounded-md bg-red-600 text-white font-semibold md:shadow-md hover:border-red-800 hover:bg-red-800"
                       type="button"
@@ -73,8 +73,8 @@ export function MyAccount() {
           </div>
         )
       ) : (
-        <Link span id="rajdhani-400" to={routes.login()}>
-          <button className="mr-8 h-8 w-16 border-2 border-black rounded-md  bg-white text-black">
+        <Link span id="jost" to={routes.login()}>
+          <button className="px-2 lg:w-14 lg:h-6 lg:text-sm 2xl:w-20 2xl:h-8 text-black bg-white mx-8 border border-gray-600 rounded-md">
             Login{' '}
           </button>
         </Link>
