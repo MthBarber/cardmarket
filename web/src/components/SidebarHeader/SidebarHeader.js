@@ -25,39 +25,47 @@ const SidebarHeader = () => {
             <button onClick={Toggle} className="ml-48 mr-4">
               X
             </button>
-            <Link to={routes.basket()}>
+            {isAuthenticated ? (
               <div>
-                <button className="border-2 w-28 border-purple-600 bg-purple-600 rounded-md px-1 mx-2 text-white font-semibold hover:border-purple-900 hover:bg-purple-900">
-                  Basket{' '}
-                  {isAuthenticated ? (
-                    <BasketIconCell buyerId={currentUser.id} />
-                  ) : (
-                    <span></span>
-                  )}
-                </button>
+                <Link to={routes.basket()}>
+                  <div>
+                    <button className="flex justify-around border-2 w-28 border-purple-600 bg-purple-600 rounded-md px-1 mx-2 text-white font-semibold hover:border-purple-900 hover:bg-purple-900">
+                      Basket{' '}
+                      {isAuthenticated ? (
+                        <span className="my-auto">
+                          <BasketIconCell buyerId={currentUser.id} />
+                        </span>
+                      ) : (
+                        <span></span>
+                      )}
+                    </button>
+                  </div>
+                </Link>
+                <Link to={routes.myOrders()}>
+                  <li className="mt-4">
+                    <button className="border-2 w-28 border-purple-600 bg-purple-600 rounded-md px-1 mx-2 text-white font-semibold hover:border-purple-900 hover:bg-purple-900">
+                      My Orders
+                    </button>
+                  </li>
+                </Link>
+                <Link to={routes.itemsForSale()}>
+                  <li className="mt-4">
+                    <button className="border-2 w-28 border-purple-600 bg-purple-600 rounded-md px-1 mx-2 text-white font-semibold hover:border-purple-900 hover:bg-purple-900">
+                      Listed Items
+                    </button>
+                  </li>
+                </Link>
+                <Link to={routes.newItemForSaleForm()}>
+                  <li className="mt-4">
+                    <button className="border-2 w-28 border-purple-600 bg-purple-600 rounded-md px-1 mx-2 text-white font-semibold hover:border-purple-900 hover:bg-purple-900">
+                      Sell Cards
+                    </button>
+                  </li>
+                </Link>
               </div>
-            </Link>
-            <Link to={routes.myOrders()}>
-              <li className="mt-4">
-                <button className="border-2 w-28 border-purple-600 bg-purple-600 rounded-md px-1 mx-2 text-white font-semibold hover:border-purple-900 hover:bg-purple-900">
-                  My Orders
-                </button>
-              </li>
-            </Link>
-            <Link to={routes.itemsForSale()}>
-              <li className="mt-4">
-                <button className="border-2 w-28 border-purple-600 bg-purple-600 rounded-md px-1 mx-2 text-white font-semibold hover:border-purple-900 hover:bg-purple-900">
-                  Listed Items
-                </button>
-              </li>
-            </Link>
-            <Link to={routes.newItemForSaleForm()}>
-              <li className="mt-4">
-                <button className="border-2 w-28 border-purple-600 bg-purple-600 rounded-md px-1 mx-2 text-white font-semibold hover:border-purple-900 hover:bg-purple-900">
-                  Sell Cards
-                </button>
-              </li>
-            </Link>
+            ) : (
+              <span> </span>
+            )}
             {isAuthenticated ? (
               <li className="flex flex-col items-center my-4">
                 <span className="text-black text-l font-bold" id="rajdhani-400">

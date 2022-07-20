@@ -39,7 +39,7 @@ export function Header() {
       </div>
       <Link to={routes.basket()}>
         <div id="jost" className="mx-12 hidden md:block">
-          <button className="px-2 lg:w-14 lg:h-6 lg:text-sm 2xl:w-20 2xl:h-8 flex justify-around items-center text-black bg-white mx-8 border border-gray-600 rounded-md">
+          <button className="px-2 lg:w-20 lg:h-6 lg:text-sm 2xl:w-20 2xl:h-6 flex justify-around items-center text-black text-center bg-white mx-8 border border-gray-600 rounded-md">
             Basket{' '}
             {isAuthenticated ? (
               <BasketIconCell buyerId={currentUser.id} />
