@@ -13,7 +13,7 @@ export function MyAccount() {
         isOpen == false ? (
           <button
             id="jost"
-            className="border lg:w-24 lg:h-6 lg:text-sm border-black bg-white rounded-md px-2 mx-2 text-black"
+            className="border lg:w-24 lg:h-6 lg:text-sm border-gray-600 bg-white rounded-md px-2 mx-2 text-black"
             onClick={Toggle}
           >
             My Account
@@ -22,7 +22,7 @@ export function MyAccount() {
           <div className="flex flex-col items-center">
             <button
               id="jost"
-              className="border lg:w-24 lg:h-6 lg:text-sm border-black bg-white rounded-md px-2 mx-2 text-black"
+              className="border lg:w-24 lg:h-6 lg:text-sm border-gray-600 bg-white rounded-md px-2 mx-2 text-black"
               onClick={Toggle}
             >
               My Account

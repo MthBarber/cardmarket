@@ -52,24 +52,6 @@ export function Header() {
       <div className="mr-8 hidden md:block">
         <MyAccount />
       </div>
-      {/* {isAuthenticated ? (
-        <div className="mr-8">
-          <span id="rajdhani-400">Logged in as {currentUser.username}</span>{' '}
-          <button
-            className="border-2 h-8 border-gray-600 m-2 w-20 rounded-md bg-white text-black md:shadow-md"
-            type="button"
-            onClick={logOut}
-          >
-            Logout
-          </button>
-        </div>
-      ) : (
-        <Link span id="rajdhani-400" to={routes.login()}>
-          <button className="mr-8 h-8 w-16 border-2 border-black rounded-md  bg-white text-black">
-            Login{' '}
-          </button>
-        </Link>
-      )} */}
     </nav>
   )
 }
