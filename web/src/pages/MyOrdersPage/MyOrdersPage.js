@@ -21,7 +21,7 @@ const MyOrdersPage = () => {
           <p className="mt-8"> Please login to your account</p>
         )}
       </div>
-      <div className="absolute bottom-0">
+      <div className="relative bottom-0">
         <Footer />
       </div>
     </section>
