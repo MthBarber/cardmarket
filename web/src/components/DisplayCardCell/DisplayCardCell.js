@@ -51,7 +51,7 @@ export const Success = ({ displayCard }) => {
           </div>
           <div className="font-semibold">
             Starting from:{' '}
-            <span id="jost">£{displayCard.startingFromPrice}</span>
+            <span id="jost">£{displayCard.startingFromPrice.toFixed(2)}</span>
           </div>
           <div className="font-semibold">
             Color Identity: <span id="jost"> </span>
