@@ -29,7 +29,7 @@ const ItemsForSalePage = () => {
           </button>
         </Link>
       </div>
-      <div className="absolute mt-8 inset-x-0 bottom-0">
+      <div className="absolute lg:relative mt-8 inset-x-0 bottom-0">
         <Footer />
       </div>
     </div>

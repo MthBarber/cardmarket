@@ -45,7 +45,7 @@ const DisplayCardPage = ({ id }) => {
           <ListedSellingItemsCell cardId={id} />
         </div>
       </div>
-      <div className="absolute inset-x-0 bottom-0 ">
+      <div className="absolute lg:relative pt-4 bottom-0 ">
         <Footer />
       </div>
     </div>

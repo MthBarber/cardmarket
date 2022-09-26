@@ -52,7 +52,7 @@ const HomePage = () => {
           </div>
         </section>
       </div>
-      <div className="mt-8">
+      <div className="absolute lg:relative mt-8">
         <Footer />
       </div>
     </div>
