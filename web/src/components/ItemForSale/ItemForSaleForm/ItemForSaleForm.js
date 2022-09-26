@@ -115,17 +115,18 @@ const ItemForSaleForm = (props) => {
         >
           <option value={1}>Nashi Moon Sage's Scion </option>
           <option value={2}>Light-Paws, Emperor's Voice </option>
-          <option value={3}>Hinata, Dawn-Crowned </option>
-          <option value={4}>Omniscience </option>
-          <option value={5}>Wheel of Fortune </option>
-          <option value={6}>Cultivator Colossus </option>
-          <option value={7}>Hex Parasite </option>
-          <option value={8}>Jeweled Lotus </option>
-          <option value={9}>Omnath, Locus of Creation </option>
-          <option value={10}>The Reality Chip </option>
-          <option value={11}>Stoneforge Mystic </option>
-          <option value={12}>Lion's Eye Diamond </option>
-          <option value={13}>Goatnapper </option>
+          <option value={3}>Omniscience </option>
+          <option value={4}>Wheel of Fortune </option>
+          <option value={5}>Hinata, Dawn-Crowned </option>
+          <option value={6}>Council's Judgment </option>
+          <option value={7}>Cultivator Colossus </option>
+          <option value={8}>Hex Parasite </option>
+          <option value={9}>Jeweled Lotus </option>
+          <option value={10}>Omnath, Locus of Creation </option>
+          <option value={11}>The Reality Chip </option>
+          <option value={12}>Stoneforge Mystic </option>
+          <option value={13}>Lion's Eye Diamond </option>
+          <option value={14}>Goatnapper </option>
         </SelectField>
 
         <FieldError name="cardId" className="rw-field-error" />
