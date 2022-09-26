@@ -24,7 +24,7 @@ const NewItemForSaleFormPage = () => {
         <NewItemForSale currentUser={currentUser.id} />
         {/* <ItemForSaleForm /> */}
       </div>
-      <div className="relative inset-x-0 bottom-0">
+      <div className="absolute inset-x-0 bottom-0">
         <Footer />
       </div>
     </div>
