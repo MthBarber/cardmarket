@@ -18,7 +18,7 @@ export function Header() {
       >
         <Link to={routes.home()}>MTG Marketplace</Link>
       </h1>
-      <ul
+      {/* <ul
         id="rajdhani"
         className="lg:flex hidden mx-auto md:ml-auto md:mr-auto md:justify-self-center md:gap-8 md:mt-auto md:mb-2 md:text-sm md:font-medium md:transition-shadow"
       >
@@ -26,7 +26,7 @@ export function Header() {
         <li>Playmats</li>
         <li>Decks</li>
         <li>Deckboxes</li>
-      </ul>
+      </ul> */}
       <div className="md:ml-4 hidden">
         <Link to={routes.itemsForSale()}>
           <button

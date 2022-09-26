@@ -74,7 +74,7 @@ export function MyAccount() {
         )
       ) : (
         <Link span id="jost" to={routes.login()}>
-          <button className="px-2 lg:w-14 lg:h-6 lg:text-sm 2xl:w-20 2xl:h-8 text-black bg-white mx-8 border border-gray-600 rounded-md">
+          <button className="px-2 lg:w-14 lg:h-6 lg:text-sm 2xl:w-20 2xl:h-6 text-black bg-white mx-8 border border-gray-600 rounded-md">
             Login{' '}
           </button>
         </Link>
