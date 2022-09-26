@@ -14,7 +14,7 @@ const DisplayCardPage = ({ id }) => {
     <div className="h-full w-screen bg-gray-100">
       <Header />
       <MetaTags title="DisplayCard" description="DisplayCard page" />
-      <div className="flex md:flex-row justify-center w-2/3 mx-auto mt-6 mb-6 border bg-grey-100">
+      <div className="flex md:flex-row justify-center w-2/3 mx-auto mt-6 mb-6 border bg-white">
         <DisplayCardCell id={id} />
       </div>
       <div className="mx-auto mb-36 border-2 border-black flex-grow h-2/3 w-full sm:w-2/3 flex flex-col justify-between bg-white">
