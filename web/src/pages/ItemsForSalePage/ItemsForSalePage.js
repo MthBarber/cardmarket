@@ -10,7 +10,7 @@ const ItemsForSalePage = () => {
   const { isAuthenticated, currentUser } = useAuth()
 
   return (
-    <div className="flex flex-col items-center justify-start w-full h-full ">
+    <div className="flex flex-col items-center justify-start w-full h-full min-h-screen">
       <MetaTags title="ItemsForSale" description="ItemsForSale page" />
       <div className="w-full h-full">
         <Header />
@@ -29,7 +29,7 @@ const ItemsForSalePage = () => {
           </button>
         </Link>
       </div>
-      <div className="absolute lg:relative mt-8 inset-x-0 bottom-0">
+      <div className="absolute lg:relative mt-auto inset-x-0 bottom-0">
         <Footer />
       </div>
     </div>
