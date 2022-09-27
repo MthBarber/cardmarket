@@ -26,9 +26,7 @@ export const Empty = () => {
   return (
     <div className="rw-text-center">
       <p>No itemForSales yet.</p>
-      <Link to={routes.newItemForSaleForm()} className="rw-link">
-        <p>Create one?</p>
-      </Link>
+      <Link to={routes.newItemForSaleForm()} className="rw-link"></Link>
     </div>
   )
 }
