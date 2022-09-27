@@ -7,7 +7,7 @@ import { useAuth } from '@redwoodjs/auth'
 const MyOrdersPage = () => {
   const { isAuthenticated, currentUser } = useAuth()
   return (
-    <section className="w-full h-full flex flex-col">
+    <section className="w-full h-full min-h-screen flex flex-col">
       <MetaTags title="My Orders" description="MyOrders page" />
       <Header />
 
@@ -21,7 +21,7 @@ const MyOrdersPage = () => {
           <p className="mt-8"> Please login to your account</p>
         )}
       </div>
-      <div className="absolute lg:relative bottom-0">
+      <div className="absolute lg:relative mt-auto bottom-0">
         <Footer />
       </div>
     </section>

@@ -7,7 +7,7 @@ import { useAuth } from '@redwoodjs/auth'
 const BasketPage = () => {
   const { isAuthenticated, currentUser } = useAuth()
   return (
-    <div className="flex flex-col items-center justify-start h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-start h-screen min-h-screen bg-gray-100">
       <MetaTags title="Basket" description="Basket page" />
       <div className="w-full bg-white">
         <Header />
@@ -51,7 +51,7 @@ const BasketPage = () => {
         </div> */}
       </div>
 
-      <div className="absolute lg:relative mt-8 inset-x-0 bottom-0">
+      <div className="absolute lg:relative mt-auto inset-x-0 bottom-0">
         <Footer />
       </div>
     </div>

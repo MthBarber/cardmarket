@@ -9,7 +9,7 @@ import { useAuth } from '@redwoodjs/auth'
 const NewItemForSaleFormPage = () => {
   const { isAuthenticated, currentUser, logOut } = useAuth()
   return (
-    <div className="flex flex-col items-center h-full w-full ">
+    <div className="flex flex-col items-center h-full min-h-screen w-full ">
       <div className="w-full">
         <Header />
       </div>
@@ -24,7 +24,7 @@ const NewItemForSaleFormPage = () => {
         <NewItemForSale currentUser={currentUser.id} />
         {/* <ItemForSaleForm /> */}
       </div>
-      <div className="absolute inset-x-0 bottom-0">
+      <div className="absolute mt-auto inset-x-0 bottom-0">
         <Footer />
       </div>
     </div>

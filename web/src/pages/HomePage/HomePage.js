@@ -12,7 +12,7 @@ const HomePage = () => {
   // .then((data) => console.log(data))
   // }
   return (
-    <div className="h-full w-screen flex flex-col justify-between items-center bg-gray-100">
+    <div className="h-full min-h-screen w-screen flex flex-col justify-between items-center bg-gray-100">
       <MetaTags title="Home" description="Home page" />
       <div className="w-full">
         <Header />
@@ -52,7 +52,7 @@ const HomePage = () => {
           </div>
         </section>
       </div>
-      <div className="absolute lg:relative mt-8">
+      <div className="absolute lg:relative mt-auto">
         <Footer />
       </div>
     </div>
