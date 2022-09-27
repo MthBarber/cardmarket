@@ -24,10 +24,10 @@ export const QUERY = gql`
 export const Loading = () => <div>Loading...</div>
 
 export const Empty = () => (
-  <div className="flex flex-col items-center">
+  <div className="flex flex-col items-center mt-8">
     <p>Your basket is empty</p>
     <Link to={routes.home()}>
-      <button className="mt-8 bg-green-500 border-green-500 text-white">
+      <button className="mt-8 bg-green-500 border-green-500 px-2 py-2 text-white">
         Return to the homepage
       </button>
     </Link>

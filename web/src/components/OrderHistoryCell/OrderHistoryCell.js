@@ -31,8 +31,13 @@ export const QUERY = gql`
 export const Loading = () => <div>Loading...</div>
 
 export const Empty = () => (
-  <div className="mt-18 text-lg">
-    Doesn't look like you've purchased anything, why not browse!
+  <div className="mt-16 text-lg">
+    <p>Doesn't look like you've purchased anything, why not browse!</p>
+    <Link to={routes.home()}>
+      <button className="mt-8 bg-green-500 border-green-500 px-2 py-2 text-white">
+        Return to the homepage
+      </button>
+    </Link>
   </div>
 )
 
