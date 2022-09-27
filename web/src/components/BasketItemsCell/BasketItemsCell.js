@@ -1,5 +1,6 @@
 import { RemoveFromBasketButton } from 'src/components/RemoveFromBasketButton'
 import { CompletePurchaseButton } from 'src/components/CompletePurchaseButton'
+import { Link, routes } from '@redwoodjs/router'
 export { QUERY as ItemsInBasketQuery }
 
 export const QUERY = gql`
@@ -22,7 +23,16 @@ export const QUERY = gql`
 
 export const Loading = () => <div>Loading...</div>
 
-export const Empty = () => <div>Empty</div>
+export const Empty = () => (
+  <div className="flex flex-col items-center">
+    <p>Your basket is empty</p>
+    <Link to={routes.home()}>
+      <button className="mt-8 bg-green-500 border-green-500 text-white">
+        Return to the homepage
+      </button>
+    </Link>
+  </div>
+)
 
 export const Failure = ({ error }) => (
   <div style={{ color: 'red' }}>Error: {error.message}</div>

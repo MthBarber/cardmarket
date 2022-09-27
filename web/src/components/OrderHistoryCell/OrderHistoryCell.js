@@ -32,7 +32,7 @@ export const Loading = () => <div>Loading...</div>
 
 export const Empty = () => (
   <div className="mt-18 text-lg">
-    Doesn't Look like you've purchased anything, why not browse!
+    Doesn't look like you've purchased anything, why not browse!
   </div>
 )
 

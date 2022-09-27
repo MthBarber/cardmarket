@@ -24,8 +24,8 @@ export const Loading = () => <div>Loading...</div>
 
 export const Empty = () => {
   return (
-    <div className="rw-text-center">
-      <p>No itemForSales yet.</p>
+    <div className="rw-text-center mt-36">
+      <p id="rajdhani">You don't have any items currently listed for sale.</p>
       <Link to={routes.newItemForSaleForm()} className="rw-link"></Link>
     </div>
   )
